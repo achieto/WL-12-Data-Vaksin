@@ -37,6 +37,6 @@ class Login extends Migration
 
 	public function down()
 	{
-		$this->forge->dropTable('users');
+		$this->forge->dropTable('login');
 	}
 }

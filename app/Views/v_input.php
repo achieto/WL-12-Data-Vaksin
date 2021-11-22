@@ -102,6 +102,21 @@
                             <td><input type="text" name="usia" required></td>
                         </tr>
                         <tr>
+                            <td>Kategori</td>
+                            <td>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <label class="input-group-text" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" for="kategori">Kategori</label>
+                                    </div>
+                                    <select class="custom-select" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" name="kategori" id="kategori" required>
+                                        <option selected="true" disabled="disabled">Pilih...</option>
+                                        <option value="Tenaga Medis">Tenaga Medis</option>
+                                        <option value="Non-Tenaga Medis">Non-Tenaga Medis</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
                             <td>Vaksin</td>
                             <td>
                                 <div class="input-group">
@@ -109,9 +124,10 @@
                                         <label class="input-group-text" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" for="dosis">Dosis</label>
                                     </div>
                                     <select class="custom-select" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" name="dosis" id="dosis" required>
-                                        <option selected value="1">1</option>
+                                        <option selected="true" disabled="disabled">Pilih...</option>
+                                        <option value="1">1</option>
                                         <option value="2">2</option>
-                                        <option value="3">3</option>
+                                        <option value="3" id="3">3</option>
                                     </select>
                                 </div>
                             </td>
@@ -121,7 +137,8 @@
                                         <label class="input-group-text" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" for="jenis_vaksin">Jenis Vaksin</label>
                                     </div>
                                     <select class="custom-select" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" name="jenis_vaksin" id="jenis_vaksin" required>
-                                        <option selected value="Sinovac">Sinovac</option>
+                                        <option selected="true" disabled="disabled">Pilih...</option>
+                                        <option value="Sinovac">Sinovac</option>
                                         <option value="AstraZeneca">AstraZeneca</option>
                                         <option value="Sinopharm">Sinopharm</option>
                                         <option value="Moderna">Moderna</option>
@@ -140,8 +157,16 @@
                     </form>
                 </table>
             </div>
-
         </div>
+        <script>
+            document.getElementById('kategori').onchange = function() {
+                if (this.value == 'Non-Tenaga Medis') {
+                    document.getElementById('3').disabled = true;
+                } else {
+                    document.getElementById('3').disabled = false;
+                }
+            }
+        </script>
 
     </by>
 </cd>
