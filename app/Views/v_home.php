@@ -99,11 +99,7 @@
                 foreach ($vaksinasi as $row) :
                 ?>
                     <tr>
-<<<<<<< HEAD
                         <td scope="row"><?= strtoupper($row['no_batch']); ?></td>
-=======
-                        <td scope="row"><?= $row['no_batch']; ?></td>
->>>>>>> 5e6f469bdc96facd1112f0fe0fb05b03596b12ef
                         <td scope="row"><?= $row['nik']; ?></td>
                         <td scope="row"><?= $row['nama']; ?></td>
                         <td scope="row"><?= $row['jenis_kelamin']; ?></td>
@@ -111,17 +107,12 @@
                         <td scope="row"><?= $row['dosis']; ?></td>
                         <td scope="row"><?= $row['jenis_vaksin']; ?></td>
                         <td scope="row" style="text-align:center">
-<<<<<<< HEAD
                             <button type="button" class="btn btn-primary" style="font: 13px/20px normal Helvetica, Arial, sans-serif;"><a href="<?= base_url("edit/" . $row['no_batch']) ?>"> Edit</a></button>
                             <form action="delete/<?= $row['no_batch']; ?>" method="post" class="d-inline">
                                 <?= csrf_field(); ?>
                                 <input type="hidden" name="_method" value="Delete">
                                 <button type="submit" class="btn btn-danger" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" onclick="return confirm('Apakah anda yakin menghapus Post ini ?'); ">Delete</button>
                             </form>
-=======
-                            <button type="button" class="btn btn-primary" style="font: 13px/20px normal Helvetica, Arial, sans-serif;"><a href="">Edit</a></button>
-                            <button type="button" class="btn btn-danger" style="font: 13px/20px normal Helvetica, Arial, sans-serif;"><a href="">Delete</a></button>
->>>>>>> 5e6f469bdc96facd1112f0fe0fb05b03596b12ef
                         </td>
                     </tr>
                 <?php endforeach; ?>

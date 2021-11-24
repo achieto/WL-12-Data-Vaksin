@@ -34,16 +34,14 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+$routes->get('/', 'Templating::login');
+$routes->get('/admin', 'Templating::index');
 $routes->get('/home', 'VaksinController::index');
 $routes->get('/input', 'VaksinController::create');
 $routes->post('/store', 'VaksinController::store');
-<<<<<<< HEAD
 $routes->get('/edit/(:any)', 'VaksinController::edit/$1');
 $routes->post('/update/(:any)', 'VaksinController::update/$1');
 $routes->delete('/delete/(:any)', 'VaksinController::delete/$1');
-=======
->>>>>>> 5e6f469bdc96facd1112f0fe0fb05b03596b12ef
 
 /*
  * --------------------------------------------------------------------
@@ -61,8 +59,4 @@ $routes->delete('/delete/(:any)', 'VaksinController::delete/$1');
 if (file_exists(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php'))
 {
 	require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 5e6f469bdc96facd1112f0fe0fb05b03596b12ef

@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-<<<<<<< HEAD
 use App\Models\VaksinModel;
 
 class VaksinController extends BaseController
@@ -15,11 +14,6 @@ class VaksinController extends BaseController
 		$this->VaksinModel = new VaksinModel();
 	}
 
-=======
-
-class VaksinController extends BaseController
-{
->>>>>>> 5e6f469bdc96facd1112f0fe0fb05b03596b12ef
 	public function index()
 	{
 		$VaksinModel = model("VaksinModel");
@@ -45,7 +39,6 @@ class VaksinController extends BaseController
 			'dosis' => $this->request->getVar('dosis'),
 			'jenis_vaksin' => $this->request->getVar('jenis_vaksin'),
 		];
-<<<<<<< HEAD
 		
 		$VaksinModel = model("VaksinModel");
 		$VaksinModel->insert($data);
@@ -76,10 +69,3 @@ class VaksinController extends BaseController
 		return redirect()->to(base_url('home/'));
 	}
 }
-=======
-		$PostModel = model("VaksinModel");
-		$PostModel->insert($data);
-		return redirect()->to(base_url('/home'));
-	}
-}
->>>>>>> 5e6f469bdc96facd1112f0fe0fb05b03596b12ef
