@@ -31,6 +31,11 @@ class Vaksinasi extends Migration
 				'type' => 'INT',
 				'constraint'     => '3'
 			],
+			'kategori' => [
+				'type' => 'VARCHAR',
+				'constraint' => '100',
+				'null' => true,
+			],
 			'dosis' => [
 				'type' => 'INT',
 				'constraint'     => '1'

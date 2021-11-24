@@ -9,16 +9,17 @@ class Login extends Migration
 		$this->forge->addField([
 			'username'          => [
 				'type'           => 'VARCHAR',
-				'constraint'     => '100',
+				'constraint'     => '30',
 			],
 			'password'       => [
 				'type'           => 'VARCHAR',
-				'constraint'     => '100',
+				'constraint'     => '8',
 			],
-			'name'       => [
+			'nama'       => [
 				'type'           => 'VARCHAR',
-				'constraint'     => '100',
+				'constraint'     => '35',
 			],
+			
 			
 		]);
 		$this->forge->addPrimaryKey('username', true);
@@ -27,6 +28,6 @@ class Login extends Migration
 
 	public function down()
 	{
-		$this->forge->dropTable('users');
+		$this->forge->dropTable('login');
 	}
 }
