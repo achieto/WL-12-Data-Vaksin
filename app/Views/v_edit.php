@@ -83,11 +83,11 @@
                         </tr>
                         <tr>
                             <td>NIK</td>
-                            <td><input type="text" name="nik" required value="<?php echo $row['nik'] ?>"></td>
+                            <td><input type="text" name="nik" autocomplete="off" required value="<?php echo $row['nik'] ?>"></td>
                         </tr>
                         <tr>
                             <td>Nama</td>
-                            <td><input type="text" name="nama" required value="<?php echo $row['nama'] ?>"></td>
+                            <td><input type="text" name="nama" autocomplete="off" required value="<?php echo $row['nama'] ?>"></td>
                         </tr>
                         <tr>
                             <td>Jenis Kelamin</td>
@@ -100,7 +100,7 @@
                         </tr>
                         <tr>
                             <td>Usia</td>
-                            <td><input type="text" name="usia" required value=" <?php echo $row['usia'] ?>"></td>
+                            <td><input type="text" name="usia" autocomplete="off" required value=" <?php echo $row['usia'] ?>"></td>
                         </tr>
                         <tr>
                             <td>Kategori</td>

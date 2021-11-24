@@ -78,15 +78,52 @@
                     <form action="/store" method="post">
                         <tr>
                             <td>No Batch</td>
-                            <td><input type="text" name="no_batch" required></td>
+                            <td><input type="text" name="no_batch" autocomplete="off" required></td>
+                        </tr>
+                        <tr>
+                            <td>Wilayah</td>
+                            <td>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <label class="input-group-text" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" for="wilayah">Wilayah</label>
+                                    </div>
+                                    <select class="custom-select" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" name="wilayah" id="wilayah" required>
+                                        <option selected="true" disabled="disabled">Pilih...</option>
+                                        <optgroup label="Wilayah 1">
+                                            <option value="1">Sumatera</option>
+                                            <option value="1">Jakarta</option>
+                                            <option value="1">Jawa Barat</option>
+                                            <option value="1">Banten</option>
+                                        </optgroup>
+                                        <optgroup label="Wilayah 2">
+                                            <option value="2">Jawa Tengah</option>
+                                            <option value="2">Yogyakarta</option>
+                                        </optgroup>
+                                        <optgroup label="Wilayah 3">
+                                            <option value="3">Jawa Timur</option>
+                                            <option value="3">Kalimantan</option>
+                                            <option value="3">Madura</option>
+                                            <option value="3">Bali</option>
+                                            <option value="3">NTT</option>
+                                            <option value="3">NTB</option>
+                                        </optgroup>
+                                        <optgroup label="Wilayah 4">
+                                            <option value="4">Sulawesi</option>
+                                            <option value="4">Maluku</option>
+                                            <option value="4">Papua</option>
+                                        </optgroup>
+                                    </select>
+                                    <span id="description"></span>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td>NIK</td>
-                            <td><input type="text" name="nik" required></td>
+                            <td><input type="text" name="nik" autocomplete="off" required></td>
                         </tr>
                         <tr>
                             <td>Nama</td>
-                            <td><input type="text" name="nama" required></td>
+                            <td><input type="text" name="nama" autocomplete="off" required></td>
                         </tr>
                         <tr>
                             <td>Jenis Kelamin</td>
@@ -99,7 +136,7 @@
                         </tr>
                         <tr>
                             <td>Usia</td>
-                            <td><input type="text" name="usia" required></td>
+                            <td><input type="text" name="usia" autocomplete="off" required></td>
                         </tr>
                         <tr>
                             <td>Kategori</td>
@@ -167,7 +204,6 @@
                 }
             }
         </script>
-
     </by>
 </cd>
 

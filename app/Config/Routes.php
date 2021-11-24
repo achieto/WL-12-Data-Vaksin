@@ -35,6 +35,10 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/home', 'VaksinController::index');
+$routes->get('/wilayah1', 'VaksinController::wil1');
+$routes->get('/wilayah2', 'VaksinController::wil2');
+$routes->get('/wilayah3', 'VaksinController::wil3');
+$routes->get('/wilayah4', 'VaksinController::wil4');
 $routes->get('/input', 'VaksinController::create');
 $routes->post('/store', 'VaksinController::store');
 $routes->get('/edit/(:any)', 'VaksinController::edit/$1');

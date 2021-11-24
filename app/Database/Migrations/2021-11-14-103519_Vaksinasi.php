@@ -14,6 +14,10 @@ class Vaksinasi extends Migration
 				'constraint'     => 11,
 				'auto_increment' => true,
 			],
+			'wilayah'          => [
+				'type'           => 'VARCHAR',
+				'constraint'     => '1',
+			],
 			'nik'       => [
 				'type'       => 'BIGINT',
 				'constraint' => '16',
@@ -34,7 +38,6 @@ class Vaksinasi extends Migration
 			'kategori' => [
 				'type' => 'VARCHAR',
 				'constraint' => '100',
-				'null' => true,
 			],
 			'dosis' => [
 				'type' => 'INT',
@@ -46,6 +49,7 @@ class Vaksinasi extends Migration
 			],
 			'updated_at' => [
 				'type' => 'DATETIME',
+				'null' => true
 			]
 		]);
 		$this->forge->addKey('no_batch', true);
