@@ -83,11 +83,11 @@
                         </tr>
                         <tr>
                             <td>NIK</td>
-                            <td><input type="text" name="nik" required value="<?php echo $row['nik'] ?>"></td>
+                            <td><input type="text" name="nik" autocomplete="off" required value="<?php echo $row['nik'] ?>"></td>
                         </tr>
                         <tr>
                             <td>Nama</td>
-                            <td><input type="text" name="nama" required value="<?php echo $row['nama'] ?>"></td>
+                            <td><input type="text" name="nama" autocomplete="off" required value="<?php echo $row['nama'] ?>"></td>
                         </tr>
                         <tr>
                             <td>Jenis Kelamin</td>
@@ -100,7 +100,22 @@
                         </tr>
                         <tr>
                             <td>Usia</td>
-                            <td><input type="text" name="usia" required value=" <?php echo $row['usia'] ?>"></td>
+                            <td><input type="text" name="usia" autocomplete="off" required value=" <?php echo $row['usia'] ?>"></td>
+                        </tr>
+                        <tr>
+                            <td>Kategori</td>
+                            <td>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <label class="input-group-text" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" for="kategori">Kategori</label>
+                                    </div>
+                                    <select class="custom-select" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" name="kategori" id="kategori" required>
+                                        <option selected="true" disabled="disabled">Pilih...</option>
+                                        <option value="Tenaga Medis">Tenaga Medis</option>
+                                        <option value="Non-Tenaga Medis">Non-Tenaga Medis</option>
+                                    </select>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td>Vaksin</td>
@@ -110,7 +125,8 @@
                                         <label class="input-group-text" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" for="dosis">Dosis</label>
                                     </div>
                                     <select class="custom-select" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" name="dosis" id="dosis" required>
-                                        <option selected value="1">1</option>
+                                        <option selected="true" disabled="disabled">Pilih...</option>
+                                        <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
                                     </select>
@@ -122,7 +138,8 @@
                                         <label class="input-group-text" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" for="jenis_vaksin">Jenis Vaksin</label>
                                     </div>
                                     <select class="custom-select" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" name="jenis_vaksin" id="jenis_vaksin" required>
-                                        <option selected value="Sinovac">Sinovac</option>
+                                        <option selected="true" disabled="disabled">Pilih...</option>
+                                        <option value="Sinovac">Sinovac</option>
                                         <option value="AstraZeneca">AstraZeneca</option>
                                         <option value="Sinopharm">Sinopharm</option>
                                         <option value="Moderna">Moderna</option>

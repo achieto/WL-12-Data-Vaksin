@@ -14,6 +14,10 @@ class Vaksinasi extends Migration
 				'constraint'     => 11,
 				'auto_increment' => true,
 			],
+			'wilayah'          => [
+				'type'           => 'VARCHAR',
+				'constraint'     => '1',
+			],
 			'nik'       => [
 				'type'       => 'BIGINT',
 				'constraint' => '16',
@@ -30,6 +34,10 @@ class Vaksinasi extends Migration
 			'usia' => [
 				'type' => 'INT',
 				'constraint'     => '3'
+			],
+			'kategori' => [
+				'type' => 'VARCHAR',
+				'constraint' => '100',
 			],
 			'dosis' => [
 				'type' => 'INT',

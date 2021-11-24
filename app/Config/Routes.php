@@ -20,7 +20,7 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php'))
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Home');
+$routes->setDefaultController('VaksinController');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -37,6 +37,10 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Templating::login');
 $routes->get('/admin', 'Templating::index');
 $routes->get('/home', 'VaksinController::index');
+$routes->get('/wilayah1', 'VaksinController::wil1');
+$routes->get('/wilayah2', 'VaksinController::wil2');
+$routes->get('/wilayah3', 'VaksinController::wil3');
+$routes->get('/wilayah4', 'VaksinController::wil4');
 $routes->get('/input', 'VaksinController::create');
 $routes->post('/store', 'VaksinController::store');
 $routes->get('/edit/(:any)', 'VaksinController::edit/$1');

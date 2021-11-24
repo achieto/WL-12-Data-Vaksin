@@ -1,9 +1,7 @@
 <?php
 
 namespace App\Database\Migrations;
-
 use CodeIgniter\Database\Migration;
-
 class Login extends Migration
 {
 	public function up()
@@ -11,25 +9,18 @@ class Login extends Migration
 		$this->forge->addField([
 			'username'          => [
 				'type'           => 'VARCHAR',
-				'constraint'     => '100',
+				'constraint'     => '30',
 			],
 			'password'       => [
 				'type'           => 'VARCHAR',
-				'constraint'     => '100',
+				'constraint'     => '8',
 			],
-			'name'       => [
+			'nama'       => [
 				'type'           => 'VARCHAR',
-				'constraint'     => '100',
+				'constraint'     => '35',
 			],
-			'created_at' => [
-				'type'           => 'DATETIME',
-				'null'       	 => true,
-			],
-			'updated_at' => [
-				'type'           => 'DATETIME',
-				'null'       	 => true,
-			]
- 
+			
+			
 		]);
 		$this->forge->addPrimaryKey('username', true);
 		$this->forge->createTable('login');
@@ -37,6 +28,6 @@ class Login extends Migration
 
 	public function down()
 	{
-		$this->forge->dropTable('users');
+		$this->forge->dropTable('login');
 	}
 }
