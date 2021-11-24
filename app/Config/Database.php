@@ -35,7 +35,11 @@ class Database extends Config
 		'hostname' => 'localhost',
 		'username' => 'root',
 		'password' => '',
+<<<<<<< HEAD
 		'database' => 'vaksin',
+=======
+		'database' => 'vaksinasi',
+>>>>>>> 49bb71f93863a17f84fd92ebb7be1bd2c98f9122
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
 		'pConnect' => false,
