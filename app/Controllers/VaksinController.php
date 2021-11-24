@@ -25,22 +25,22 @@ class VaksinController extends BaseController
 
 	public function wil1()
 	{
-		return view("v_wilayah1");
+		return view("wilayah/v_wilayah1");
 	}
 
 	public function wil2()
 	{
-		return view("v_wilayah2");
+		return view("wilayah/v_wilayah2");
 	}
 
 	public function wil3()
 	{
-		return view("v_wilayah3");
+		return view("wilayah/v_wilayah3");
 	}
 
 	public function wil4()
 	{
-		return view("v_wilayah4");
+		return view("wilayah/v_wilayah4");
 	}
 
 	public function create()
