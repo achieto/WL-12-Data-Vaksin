@@ -46,7 +46,6 @@ class Vaksinasi extends Migration
 			],
 			'updated_at' => [
 				'type' => 'DATETIME',
-				'null' => true
 			]
 		]);
 		$this->forge->addKey('no_batch', true);
