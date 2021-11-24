@@ -25,27 +25,42 @@ class VaksinController extends BaseController
 
 	public function wil1()
 	{
-		return view("v_wilayah1");
+		$data = [
+			'title' => "Region 1",
+		];
+		return view("wilayah/v_wilayah1", $data);
 	}
 
 	public function wil2()
 	{
-		return view("v_wilayah2");
+		$data = [
+			'title' => "Region 2",
+		];
+		return view("wilayah/v_wilayah2", $data);
 	}
 
 	public function wil3()
 	{
-		return view("v_wilayah3");
+		$data = [
+			'title' => "Region 3",
+		];
+		return view("wilayah/v_wilayah3", $data);
 	}
 
 	public function wil4()
 	{
-		return view("v_wilayah4");
+		$data = [
+			'title' => "Region 4",
+		];
+		return view("wilayah/v_wilayah4", $data);
 	}
 
 	public function create()
 	{
-		return view('v_input');
+		$data = [
+			'title' => "Input Entry",
+		];
+		return view('v_input', $data);
 	}
 
 	public function store()
