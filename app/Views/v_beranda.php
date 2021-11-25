@@ -25,7 +25,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="/admin">
                     <i class="fas fa-home"></i>
-                    <span>Beranda</span></a>
+                    <span>Home</span></a>
             </li>
 
             <!-- Divider -->
@@ -38,37 +38,24 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
+                <a class="nav-link" href="/input">
+                    <i class="fas fa-home"></i>
+                    <span>Input Entry</span></a>
+            </li>
+
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Medis</span>
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Entry</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Wilayah:</h6>
-                        <a class="collapse-item" href="/home">Wilayah 1</a>
-                        <a class="collapse-item" href="cards.html">Wilayah 2</a>
-                        <a class="collapse-item" href="cards.html">Wilayah 3</a>
-                        <a class="collapse-item" href="cards.html">Wilayah 4</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Non-Medis</span>
-                </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Wilayah:</h6>
-                        <a class="collapse-item" href="/home">Wilayah 1</a>
-                        <a class="collapse-item" href="cards.html">Wilayah 2</a>
-                        <a class="collapse-item" href="cards.html">Wilayah 3</a>
-                        <a class="collapse-item" href="cards.html">Wilayah 4</a>
+                        <h6 class="collapse-header">Region:</h6>
+                        <a class="collapse-item" href="/wilayah1">Region 1</a>
+                        <a class="collapse-item" href="/wilayah2">Region 2</a>
+                        <a class="collapse-item" href="/wilayah3">Region 3</a>
+                        <a class="collapse-item" href="/wilayah4">Region 4</a>
                     </div>
                 </div>
             </li>

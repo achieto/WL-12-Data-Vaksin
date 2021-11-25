@@ -25,27 +25,42 @@ class VaksinController extends BaseController
 
 	public function wil1()
 	{
-		return view("wilayah/v_wilayah1");
+		$data = [
+			'title' => "Region 1",
+		];
+		return view("wilayah/v_wilayah1", $data);
 	}
 
 	public function wil2()
 	{
-		return view("wilayah/v_wilayah2");
+		$data = [
+			'title' => "Region 2",
+		];
+		return view("wilayah/v_wilayah2", $data);
 	}
 
 	public function wil3()
 	{
-		return view("wilayah/v_wilayah3");
+		$data = [
+			'title' => "Region 3",
+		];
+		return view("wilayah/v_wilayah3", $data);
 	}
 
 	public function wil4()
 	{
-		return view("wilayah/v_wilayah4");
+		$data = [
+			'title' => "Region 4",
+		];
+		return view("wilayah/v_wilayah4", $data);
 	}
 
 	public function create()
 	{
-		return view('v_input');
+		$data = [
+			'title' => "Input Entry",
+		];
+		return view('v_input', $data);
 	}
 
 	public function store()
@@ -61,17 +76,19 @@ class VaksinController extends BaseController
 			'dosis' => $this->request->getVar('dosis'),
 			'jenis_vaksin' => $this->request->getVar('jenis_vaksin'),
 		];
-		
+
+
 		$VaksinModel = model("VaksinModel");
 		$VaksinModel->insert($data);
-		return redirect()->to(base_url('/home'));
+
+		return redirect()->to(base_url('/input'));
 	}
 
 	public function delete($no_batch)
 	{
 		$row = new VaksinModel();
 		$row->where(['no_batch' => $no_batch])->delete();
-		return redirect()->to(base_url('home/'));
+		return redirect()->to(base_url('admin'));
 	}
 
 	public function edit($no_batch)

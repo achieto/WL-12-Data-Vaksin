@@ -12,11 +12,6 @@ class Templating extends BaseController
 		$data = [
 			'title' => "Beranda",
 		];
-        // echo view('layouts/v_header', $data);
-		// echo view('layouts/v_sidebar');
-        // echo view('layouts/v_topbar');
-        // echo view('index');
-		// echo view('layouts/v_footer');
 		return view('v_beranda', $data);
 	}
 
@@ -26,6 +21,6 @@ class Templating extends BaseController
 			'title' => "Login",
 		];
         echo view('layouts/v_header', $data);
-        echo view('v_masuk');
+        echo view('v_login');
 	}
 }

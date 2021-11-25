@@ -19,19 +19,19 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                     </div>
-                                    <form class="user">
+                                    <form method="POST" action="login/login_action">
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                            <input type="username" name="username" class="form-control form-control-user"
+                                                id="username" aria-describedby="emailHelp"
                                                 placeholder="Username">
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Password">
+                                            <input type="password" name="password" class="form-control form-control-user"
+                                                id="password" placeholder="Password">
                                         </div>
-                                        <a href="/admin" class="btn btn-primary btn-user btn-block">
+                                        <button type="submit" name="login" class="btn btn-primary btn-user btn-block">
                                             Login
-                                        </a>
+                                        </button>
                                         <hr>
                                     </form>
                                 </div>
