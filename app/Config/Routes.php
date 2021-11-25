@@ -46,6 +46,7 @@ $routes->post('/store', 'VaksinController::store');
 $routes->get('/edit/(:any)', 'VaksinController::edit/$1');
 $routes->post('/update/(:any)', 'VaksinController::update/$1');
 $routes->delete('/delete/(:any)', 'VaksinController::delete/$1');
+$routes->post('/login_action', 'Login::login_action');
 
 /*
  * --------------------------------------------------------------------
