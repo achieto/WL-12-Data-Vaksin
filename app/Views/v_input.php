@@ -39,7 +39,7 @@
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item active">
                 <a class="nav-link" href="/input">
-                    <i class="fas fa-home"></i>
+                    <i class="fas fa-edit"></i>
                     <span>Input Entry</span></a>
             </li>
 
