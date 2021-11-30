@@ -19,7 +19,7 @@ class Login extends BaseController
 		$password = $this->request->getVar('password');
 		// $this->request->getPost('Password');
 
-		$cek = $admin->get_data($username, $password);
+		//$cek = $admin->get_data($username, $password);
 		if (($username == 'admin') && ($password == 'admin123')) 
 		{
 		
