@@ -36,6 +36,7 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Templating::login');
 $routes->get('/admin', 'Templating::index');
+$routes->get('/about', 'Templating::about');
 $routes->get('/home', 'VaksinController::index');
 $routes->post('/login_action', 'Login::login_action');
 $routes->get('/wilayah1', 'VaksinController::wil1');
@@ -45,13 +46,9 @@ $routes->get('/wilayah4', 'VaksinController::wil4');
 $routes->get('/input', 'VaksinController::create');
 $routes->post('/store', 'VaksinController::store');
 $routes->get('/edit/(:any)', 'VaksinController::edit/$1');
-$routes->post('/update/(:any)', 'VaksinController::update/$1');
-<<<<<<< HEAD
+$routes->post('/update/(:any)/(:any)', 'VaksinController::update/$1/$2');
 $routes->delete('/delete/(:any)/(:any)', 'VaksinController::delete/$1/$2');
-=======
-$routes->delete('/delete/(:any)', 'VaksinController::delete/$1');
 $routes->post('/login_action', 'Login::login_action');
->>>>>>> bb18c31a2a3ff95dc34dc8901a7f05b5f08a21c0
 
 /*
  * --------------------------------------------------------------------

@@ -101,11 +101,11 @@ class VaksinController extends BaseController
 		return view("v_edit", $data);
 	}
 
-	public function update($no_batch)
+	public function update($no_batch, $wilayah)
 	{
 		$VaksinModel = model("VaksinModel");
 		$data = $this->request->getPost();
 		$VaksinModel->update($no_batch, $data);
-		return redirect()->to(base_url('admin'));
+		return redirect()->to(base_url('wilayah' . $wilayah));
 	}
 }

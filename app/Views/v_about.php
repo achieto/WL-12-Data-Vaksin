@@ -37,7 +37,7 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="/input">
                     <i class="fas fa-edit"></i>
                     <span>Input Entry</span></a>
@@ -65,43 +65,14 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Addons
+                Info
             </div>
 
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
-                    aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item" href="blank.html">Blank Page</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
+            <!-- Nav Item - About -->
+            <li class="nav-item active">
                 <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
+                    <i class="fas fa-info-circle"></i>
+                    <span>About</span></a>
             </li>
 
             <!-- Divider -->
@@ -329,138 +300,62 @@
 
                     <div id="cont" style="padding: 6px;">
                         <h1>Tentang Pengembang</h1>
-
-                        <div id="by" style="padding: 6px;">
-                            <table cellpadding="5" cellspacing="5">
-                                <form action="/store" method="post">
-                                    <tr>
-                                        <td>No Batch</td>
-                                        <td><input type="text" name="no_batch" autocomplete="off" required></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Wilayah</td>
-                                        <td>
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <label class="input-group-text" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" for="wilayah">Wilayah</label>
-                                                </div>
-                                                <select class="custom-select" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" name="wilayah" id="wilayah" required>
-                                                    <option selected="true" disabled="disabled">Pilih...</option>
-                                                    <optgroup label="Wilayah 1">
-                                                        <option value="1">Sumatera</option>
-                                                        <option value="1">Jakarta</option>
-                                                        <option value="1">Jawa Barat</option>
-                                                        <option value="1">Banten</option>
-                                                    </optgroup>
-                                                    <optgroup label="Wilayah 2">
-                                                        <option value="2">Jawa Tengah</option>
-                                                        <option value="2">Yogyakarta</option>
-                                                    </optgroup>
-                                                    <optgroup label="Wilayah 3">
-                                                        <option value="3">Jawa Timur</option>
-                                                        <option value="3">Kalimantan</option>
-                                                        <option value="3">Madura</option>
-                                                        <option value="3">Bali</option>
-                                                        <option value="3">NTT</option>
-                                                        <option value="3">NTB</option>
-                                                    </optgroup>
-                                                    <optgroup label="Wilayah 4">
-                                                        <option value="4">Sulawesi</option>
-                                                        <option value="4">Maluku</option>
-                                                        <option value="4">Papua</option>
-                                                    </optgroup>
-                                                </select>
-                                                <span id="description"></span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>NIK</td>
-                                        <td><input type="text" name="nik" autocomplete="off" required></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Nama</td>
-                                        <td><input type="text" name="nama" autocomplete="off" required></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Jenis Kelamin</td>
-                                        <td><input type="radio" name="jenis_kelamin" id="ll" value="Laki-laki" required>
-                                            <label for="ll">Laki-Laki</label>
-                                        </td>
-                                        <td><input type="radio" name="jenis_kelamin" id="p" value="Perempuan" required>
-                                            <label for="p">Perempuan</label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Usia</td>
-                                        <td><input type="text" name="usia" autocomplete="off" required></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Kategori</td>
-                                        <td>
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <label class="input-group-text" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" for="kategori">Kategori</label>
-                                                </div>
-                                                <select class="custom-select" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" name="kategori" id="kategori" required>
-                                                    <option selected="true" disabled="disabled">Pilih...</option>
-                                                    <option value="Tenaga Medis">Tenaga Medis</option>
-                                                    <option value="Non-Tenaga Medis">Non-Tenaga Medis</option>
-                                                </select>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Vaksin</td>
-                                        <td>
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <label class="input-group-text" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" for="dosis">Dosis</label>
-                                                </div>
-                                                <select class="custom-select" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" name="dosis" id="dosis" required>
-                                                    <option selected="true" disabled="disabled">Pilih...</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3" id="3">3</option>
-                                                </select>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="input-group mr-5">
-                                                <div class="input-group-prepend">
-                                                    <label class="input-group-text" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" for="jenis_vaksin">Jenis Vaksin</label>
-                                                </div>
-                                                <select class="custom-select" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" name="jenis_vaksin" id="jenis_vaksin" required>
-                                                    <option selected="true" disabled="disabled">Pilih...</option>
-                                                    <option value="Sinovac">Sinovac</option>
-                                                    <option value="AstraZeneca">AstraZeneca</option>
-                                                    <option value="Sinopharm">Sinopharm</option>
-                                                    <option value="Moderna">Moderna</option>
-                                                    <option value="Novavax">Novavax</option>
-                                                    <option value="Sputnik-V">Sputnik-V</option>
-                                                    <option value="Janssen">Janssen</option>
-                                                    <option value="Convidencia">Convidencia</option>
-                                                    <option value="Zifivax">Zifivax</option>
-                                                </select>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><input class=" btn btn-secondary" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" type="submit" value="Save"></td>
-                                    </tr>
-                                </form>
-                            </table>
+                        
+                        <br><br>
+                        <div class="card-deck">
+                            <div class="card">
+                                <img src="assets/images/anggie.png" class="card-img-top" alt="Anggie Tamara">
+                                <div class="card-body">
+                                    <h5 class="card-title" align="center">Backend</h5><hr>
+                                    <p class="card-text">
+                                        Anggie Tamara<br>
+                                        1917051006
+                                    </p>
+                                    <br>
+                                    <center>
+                                        <a href="https://web.facebook.com/spachieto"><img src="assets/icons/facebook.png" width="25px"></a>
+                                        <a href="https://www.instagram.com/gietmra_/"><img src="assets/icons/instagram.png" width="25px"></a>
+                                        <a href="https://www.youtube.com/channel/UC6W1IryazZBDKISiuSkx-rQ"><img src="assets/icons/youtube.png" width="30px"></a>
+                                        <a href="https://github.com/achieto"><img src="assets/icons/github.png" width="25px"></a>
+                                    </center>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="assets/images/lase.png" class="card-img-top" alt="Anisa Nadila Lase">
+                                <div class="card-body">
+                                <h5 class="card-title" align="center">Frontend</h5><hr>
+                                    <p class="card-text">
+                                        Anisa Nadila Lase<br>
+                                        1917051003
+                                    </p>
+                                    <br>
+                                    <center>
+                                        <a href="https://web.facebook.com/anisanadila.lase"><img src="assets/icons/facebook.png" width="25px"></a>
+                                        <a href="https://www.instagram.com/ans.ndlals/"><img src="assets/icons/instagram.png" width="25px"></a>
+                                        <a href="https://www.youtube.com/channel/UCnN_i-dIOjwv1phVqzB-2xg"><img src="assets/icons/youtube.png" width="30px"></a>
+                                        <a href="https://github.com/AnisaNadila26"><img src="assets/icons/github.png" width="25px"></a>
+                                    </center>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="assets/images/aprila.png" class="card-img-top" alt="Aprila Dwi Utami">
+                                <div class="card-body">
+                                <h5 class="card-title" align="center">Database</h5><hr>
+                                    <p class="card-text">
+                                        April Dwi Utami<br>
+                                        1917051012
+                                    </p>
+                                    <br>
+                                    <center>
+                                        <a href="https://web.facebook.com/aprila.d.utami.3"><img src="assets/icons/facebook.png" width="25px"></a>
+                                        <a href="https://www.instagram.com/apriladwiutami/"><img src="assets/icons/instagram.png" width="25px"></a>
+                                        <a href="https://www.youtube.com/channel/UC7fR2jqBOozSE1uZsiE7Iag"><img src="assets/icons/youtube.png" width="30px"></a>
+                                        <a href="https://github.com/apriladwiutami"><img src="assets/icons/github.png" width="25px"></a>
+                                    </center>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <script>
-                        document.getElementById('kategori').onchange = function() {
-                            if (this.value == 'Non-Tenaga Medis') {
-                                document.getElementById('3').disabled = true;
-                            } else {
-                                document.getElementById('3').disabled = false;
-                            }
-                        }
-                    </script>
                 </div>
                 <!-- /.container-fluid -->
 
