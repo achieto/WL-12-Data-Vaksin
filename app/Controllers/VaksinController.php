@@ -81,14 +81,14 @@ class VaksinController extends BaseController
 		$VaksinModel = model("VaksinModel");
 		$VaksinModel->insert($data);
 
-		return redirect()->to(base_url('/input'));
+		return redirect()->to(base_url('/wilayah' . $data['wilayah']));
 	}
 
-	public function delete($no_batch)
+	public function delete($no_batch, $wilayah)
 	{
 		$row = new VaksinModel();
 		$row->where(['no_batch' => $no_batch])->delete();
-		return redirect()->to(base_url('admin'));
+		return redirect()->to(base_url('wilayah' . $wilayah));
 	}
 
 	public function edit($no_batch)
@@ -106,6 +106,6 @@ class VaksinController extends BaseController
 		$VaksinModel = model("VaksinModel");
 		$data = $this->request->getPost();
 		$VaksinModel->update($no_batch, $data);
-		return redirect()->to(base_url('home/'));
+		return redirect()->to(base_url('admin'));
 	}
 }

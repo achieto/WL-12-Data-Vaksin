@@ -1,9 +1,9 @@
 <?php
- 
+
 namespace App\Models;
- 
+
 use CodeIgniter\Model;
- 
+
 class AdminModel extends Model
 {
     public function get_data($username, $password)
@@ -14,7 +14,7 @@ class AdminModel extends Model
         // ->get()->getRowArray();
     }
     protected $table                = 'login';
-	protected $primaryKey           = 'username';
-	protected $allowedFields        = ['username', 'password', 'nama'];
-	protected $useTimestamp			= true;
+    protected $primaryKey           = 'username';
+    protected $allowedFields        = ['username', 'password', 'nama'];
+    protected $useTimestamp            = true;
 }
