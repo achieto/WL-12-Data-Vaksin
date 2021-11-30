@@ -339,7 +339,7 @@
                                         <td scope="row"><?= $row->jenis_vaksin ?></td>
                                         <td scope="row" style="text-align:center">
                                             <a href="<?= base_url("edit/" . $row->no_batch) ?>" class="btn btn-primary" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" role="button">Edit</a>
-                                            <form action="delete/<?= $row->no_batch ?>/<?= $row->wilayah ?> ?>" method="post" class="d-inline">
+                                            <form action="delete/<?= $row->no_batch ?>/<?= $row->wilayah ?>" method="post" class="d-inline">
                                                 <?= csrf_field(); ?>
                                                 <input type="hidden" name="_method" value="Delete">
                                                 <button type="submit" class="btn btn-danger" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" onclick="return confirm('Apakah anda yakin menghapus Post ini ?'); ">Delete</button>
@@ -360,7 +360,9 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Developed by Prianly</span>
+                        <br>
+                        <span>Copyright &copy; Our Website 2021</span>
                     </div>
                 </div>
             </footer>

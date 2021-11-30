@@ -35,6 +35,5 @@ class Login extends BaseController
 		else {
 			return redirect()->to(base_url('/'));
 		}
-		// return redirect()->to('/admin');
 	}
 }
