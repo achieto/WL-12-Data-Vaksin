@@ -357,7 +357,7 @@
                                         <td scope="row"><?= $row->dosis ?></td>
                                         <td scope="row"><?= $row->jenis_vaksin ?></td>
                                         <td scope="row" style="text-align:center">
-                                            <button type="button" class="btn btn-primary" style="font: 13px/20px normal Helvetica, Arial, sans-serif;"><a href="<?= base_url("edit/" . $row->no_batch) ?>"> Edit</a></button>
+                                            <a href="<?= base_url("edit/" . $row->no_batch) ?>" class="btn btn-primary" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" role="button">Edit</a>
                                             <form action="delete/<?= $row->no_batch ?>" method="post" class="d-inline">
                                                 <?= csrf_field(); ?>
                                                 <input type="hidden" name="_method" value="Delete">
@@ -379,7 +379,9 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Developed by Prianly</span>
+                        <br>
+                        <span>Copyright &copy; Our Website 2021</span>
                     </div>
                 </div>
             </footer>

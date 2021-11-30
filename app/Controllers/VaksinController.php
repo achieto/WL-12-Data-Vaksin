@@ -94,6 +94,7 @@ class VaksinController extends BaseController
 	public function edit($no_batch)
 	{
 		$data = [
+			'title' => "Edit Entry",
 			'row' => $this->VaksinModel->getVaksin($no_batch)
 		];
 
