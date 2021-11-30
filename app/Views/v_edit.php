@@ -128,7 +128,7 @@
                                         <option selected="true" disabled="disabled">Pilih...</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
-                                        <option value="3">3</option>
+                                        <option value="3" id="3">3</option>
                                     </select>
                                 </div>
                             </td>
@@ -160,6 +160,15 @@
             </div>
 
         </div>
+        <script>
+            document.getElementById('kategori').onchange = function() {
+                if (this.value == 'Non-Tenaga Medis') {
+                    document.getElementById('3').disabled = true;
+                } else {
+                    document.getElementById('3').disabled = false;
+                }
+            }
+        </script>
 
     </by>
 </cd>
