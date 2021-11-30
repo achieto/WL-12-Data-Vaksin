@@ -46,12 +46,8 @@ $routes->get('/input', 'VaksinController::create');
 $routes->post('/store', 'VaksinController::store');
 $routes->get('/edit/(:any)', 'VaksinController::edit/$1');
 $routes->post('/update/(:any)', 'VaksinController::update/$1');
-<<<<<<< HEAD
 $routes->delete('/delete/(:any)/(:any)', 'VaksinController::delete/$1/$2');
-=======
-$routes->delete('/delete/(:any)', 'VaksinController::delete/$1');
 $routes->post('/login_action', 'Login::login_action');
->>>>>>> bb18c31a2a3ff95dc34dc8901a7f05b5f08a21c0
 
 /*
  * --------------------------------------------------------------------
