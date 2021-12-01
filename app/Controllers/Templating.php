@@ -7,12 +7,20 @@ use App\Models\VaksinModel;
 
 class Templating extends BaseController
 {
-    public function index()
+    public function admin()
 	{
 		$data = [
-			'title' => "Beranda",
+			'title' => "Home",
 		];
-		return view('v_beranda', $data);
+		return view('v_admin', $data);
+	}
+
+	public function super()
+	{
+		$data = [
+			'title' => "Home",
+		];
+		return view('v_super', $data);
 	}
 
     public function login()
