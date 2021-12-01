@@ -141,22 +141,19 @@
                                     <td scope="col">Action</td>
                                 </tr>
                                 <?php
-                                $db = \Config\Database::connect();
-                                $db = db_connect();
-                                $vaksinasi = $db->query('SELECT * FROM vaksinasi WHERE wilayah = "1"');
-                                foreach ($vaksinasi->getResult() as $row) :
+                                foreach ($wilayah1 as $row) :
                                 ?>
                                     <tr>
-                                        <td scope="row"><?= strtoupper($row->no_batch) ?></td>
-                                        <td scope="row"><?= $row->nik ?></td>
-                                        <td scope="row"><?= $row->nama ?></td>
-                                        <td scope="row"><?= $row->jenis_kelamin ?></td>
-                                        <td scope="row"><?= $row->usia ?></td>
-                                        <td scope="row"><?= $row->dosis ?></td>
-                                        <td scope="row"><?= $row->jenis_vaksin ?></td>
+                                        <td scope="row"><?= strtoupper($row['no_batch']) ?></td>
+                                        <td scope="row"><?= $row['nik'] ?></td>
+                                        <td scope="row"><?= $row['nama'] ?></td>
+                                        <td scope="row"><?= $row['jenis_kelamin'] ?></td>
+                                        <td scope="row"><?= $row['usia'] ?></td>
+                                        <td scope="row"><?= $row['dosis'] ?></td>
+                                        <td scope="row"><?= $row['jenis_vaksin'] ?></td>
                                         <td scope="row" style="text-align:center">
-                                            <a href="<?= base_url("edit/" . $row->no_batch) ?>" class="btn btn-primary" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" role="button">Edit</a>
-                                            <form action="deleted/<?= $row->no_batch ?>/<?= $row->wilayah ?>" method="post" class="d-inline">
+                                            <a href="<?= base_url("edit/" . $row['no_batch']) ?>" class="btn btn-primary" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" role="button">Edit</a>
+                                            <form action="delete/<?= $row['no_batch'] ?>/<?= $row['wilayah'] ?> ?>" method="post" class="d-inline">
                                                 <?= csrf_field(); ?>
                                                 <!-- <input type="hidden" name="_method" value="Delete"> -->
                                                 <button type="submit" class="btn btn-danger" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" onclick="return confirm('Apakah anda yakin menghapus Post ini ?'); ">Delete</button>

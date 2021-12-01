@@ -26,6 +26,7 @@ class VaksinController extends BaseController
 	public function wil1()
 	{
 		$data = [
+			'wilayah1' => $this->VaksinModel->where('wilayah', '1')->findAll(),
 			'title' => "Region 1",
 		];
 
@@ -35,6 +36,7 @@ class VaksinController extends BaseController
 	public function wil2()
 	{
 		$data = [
+			'wilayah2' => $this->VaksinModel->where('wilayah', '2')->findAll(),
 			'title' => "Region 2",
 		];
 		return view("wilayah/v_wilayah2", $data);
@@ -43,6 +45,7 @@ class VaksinController extends BaseController
 	public function wil3()
 	{
 		$data = [
+			'wilayah3' => $this->VaksinModel->where('wilayah', '3')->findAll(),
 			'title' => "Region 3",
 		];
 		return view("wilayah/v_wilayah3", $data);
@@ -51,6 +54,7 @@ class VaksinController extends BaseController
 	public function wil4()
 	{
 		$data = [
+			'wilayah4' => $this->VaksinModel->where('wilayah', '4')->findAll(),
 			'title' => "Region 4",
 		];
 		return view("wilayah/v_wilayah4", $data);

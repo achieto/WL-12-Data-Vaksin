@@ -7,12 +7,25 @@ use App\Models\VaksinModel;
 
 class Templating extends BaseController
 {
-    public function index()
+    public function admin()
+	{
+		$VaksinModel = model("VaksinModel");
+		$data = [
+			'title' => "Home",
+			'wilayah1' => $VaksinModel->where('wilayah', '1')->findAll(),
+			'wilayah2' => $VaksinModel->where('wilayah', '2')->findAll(),
+			'wilayah3' => $VaksinModel->where('wilayah', '3')->findAll(),
+			'wilayah4' => $VaksinModel->where('wilayah', '4')->findAll(),
+		];
+		return view('v_admin', $data);
+	}
+
+	public function super()
 	{
 		$data = [
-			'title' => "Beranda",
+			'title' => "Home",
 		];
-		return view('v_beranda', $data);
+		return view('v_super', $data);
 	}
 
     public function login()
