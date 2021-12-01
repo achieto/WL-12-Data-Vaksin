@@ -37,15 +37,14 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="/input">
                     <i class="fas fa-edit"></i>
                     <span>Input Entry</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Entry</span>
                 </a>
@@ -69,8 +68,8 @@
             </div>
 
             <!-- Nav Item - About -->
-            <li class="nav-item">
-                <a class="nav-link" href="/about">
+            <li class="nav-item active">
+                <a class="nav-link" href="charts.html">
                     <i class="fas fa-info-circle"></i>
                     <span>About</span></a>
             </li>
@@ -101,11 +100,9 @@
                     </button>
 
                     <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="button">
                                     <i class="fas fa-search fa-sm"></i>
@@ -119,18 +116,14 @@
 
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-search fa-fw"></i>
                             </a>
                             <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
                                 <form class="form-inline mr-auto w-100 navbar-search">
                                     <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
+                                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                                         <div class="input-group-append">
                                             <button class="btn btn-primary" type="button">
                                                 <i class="fas fa-search fa-sm"></i>
@@ -143,15 +136,13 @@
 
                         <!-- Nav Item - Alerts -->
                         <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-bell fa-fw"></i>
                                 <!-- Counter - Alerts -->
                                 <span class="badge badge-danger badge-counter">3+</span>
                             </a>
                             <!-- Dropdown - Alerts -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="alertsDropdown">
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
                                 <h6 class="dropdown-header">
                                     Alerts Center
                                 </h6>
@@ -194,22 +185,19 @@
 
                         <!-- Nav Item - Messages -->
                         <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-envelope fa-fw"></i>
                                 <!-- Counter - Messages -->
                                 <span class="badge badge-danger badge-counter">7</span>
                             </a>
                             <!-- Dropdown - Messages -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="messagesDropdown">
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
                                 <h6 class="dropdown-header">
                                     Message Center
                                 </h6>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
-                                            alt="...">
+                                        <img class="rounded-circle" src="img/undraw_profile_1.svg" alt="...">
                                         <div class="status-indicator bg-success"></div>
                                     </div>
                                     <div class="font-weight-bold">
@@ -220,8 +208,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
-                                            alt="...">
+                                        <img class="rounded-circle" src="img/undraw_profile_2.svg" alt="...">
                                         <div class="status-indicator"></div>
                                     </div>
                                     <div>
@@ -232,8 +219,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
-                                            alt="...">
+                                        <img class="rounded-circle" src="img/undraw_profile_3.svg" alt="...">
                                         <div class="status-indicator bg-warning"></div>
                                     </div>
                                     <div>
@@ -244,8 +230,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
-                                            alt="...">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60" alt="...">
                                         <div class="status-indicator bg-success"></div>
                                     </div>
                                     <div>
@@ -262,14 +247,12 @@
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-800">Admin</span>
                                 <i class="fa fa-user-md mr-2 text-gray-800"></i>
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
@@ -299,139 +282,68 @@
                 <div class="container-fluid">
 
                     <div id="cont" style="padding: 6px;">
-                        <h1>Tambah Data Vaksin</h1>
+                        <h1>Tentang Pengembang</h1>
 
-                        <div id="by" style="padding: 6px;">
-                            <table cellpadding="5" cellspacing="5">
-                                <form action="/store" method="post">
-                                    <tr>
-                                        <td>No Batch</td>
-                                        <td><input type="text" name="no_batch" autocomplete="off" required></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Wilayah</td>
-                                        <td>
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <label class="input-group-text" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" for="wilayah">Wilayah</label>
-                                                </div>
-                                                <select class="custom-select" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" name="wilayah" id="wilayah" required>
-                                                    <option selected="true" disabled="disabled">Pilih...</option>
-                                                    <optgroup label="Wilayah 1">
-                                                        <option value="1">Sumatera</option>
-                                                        <option value="1">Jakarta</option>
-                                                        <option value="1">Jawa Barat</option>
-                                                        <option value="1">Banten</option>
-                                                    </optgroup>
-                                                    <optgroup label="Wilayah 2">
-                                                        <option value="2">Jawa Tengah</option>
-                                                        <option value="2">Yogyakarta</option>
-                                                    </optgroup>
-                                                    <optgroup label="Wilayah 3">
-                                                        <option value="3">Jawa Timur</option>
-                                                        <option value="3">Kalimantan</option>
-                                                        <option value="3">Madura</option>
-                                                        <option value="3">Bali</option>
-                                                        <option value="3">NTT</option>
-                                                        <option value="3">NTB</option>
-                                                    </optgroup>
-                                                    <optgroup label="Wilayah 4">
-                                                        <option value="4">Sulawesi</option>
-                                                        <option value="4">Maluku</option>
-                                                        <option value="4">Papua</option>
-                                                    </optgroup>
-                                                </select>
-                                                <span id="description"></span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>NIK</td>
-                                        <td><input type="text" name="nik" autocomplete="off" required></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Nama</td>
-                                        <td><input type="text" name="nama" autocomplete="off" required></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Jenis Kelamin</td>
-                                        <td><input type="radio" name="jenis_kelamin" id="ll" value="Laki-laki" required>
-                                            <label for="ll">Laki-Laki</label>
-                                        </td>
-                                        <td><input type="radio" name="jenis_kelamin" id="p" value="Perempuan" required>
-                                            <label for="p">Perempuan</label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Usia</td>
-                                        <td><input type="text" name="usia" autocomplete="off" required></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Kategori</td>
-                                        <td>
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <label class="input-group-text" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" for="kategori">Kategori</label>
-                                                </div>
-                                                <select class="custom-select" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" name="kategori" id="kategori" required>
-                                                    <option selected="true" disabled="disabled">Pilih...</option>
-                                                    <option value="Tenaga Medis">Tenaga Medis</option>
-                                                    <option value="Non-Tenaga Medis">Non-Tenaga Medis</option>
-                                                </select>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Vaksin</td>
-                                        <td>
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <label class="input-group-text" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" for="dosis">Dosis</label>
-                                                </div>
-                                                <select class="custom-select" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" name="dosis" id="dosis" required>
-                                                    <option selected="true" disabled="disabled">Pilih...</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3" id="3">3</option>
-                                                </select>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="input-group mr-5">
-                                                <div class="input-group-prepend">
-                                                    <label class="input-group-text" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" for="jenis_vaksin">Jenis Vaksin</label>
-                                                </div>
-                                                <select class="custom-select" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" name="jenis_vaksin" id="jenis_vaksin" required>
-                                                    <option selected="true" disabled="disabled">Pilih...</option>
-                                                    <option value="Sinovac">Sinovac</option>
-                                                    <option value="AstraZeneca">AstraZeneca</option>
-                                                    <option value="Sinopharm">Sinopharm</option>
-                                                    <option value="Moderna">Moderna</option>
-                                                    <option value="Novavax">Novavax</option>
-                                                    <option value="Sputnik-V">Sputnik-V</option>
-                                                    <option value="Janssen">Janssen</option>
-                                                    <option value="Convidencia">Convidencia</option>
-                                                    <option value="Zifivax">Zifivax</option>
-                                                </select>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><input class=" btn btn-secondary" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" type="submit" value="Save"></td>
-                                    </tr>
-                                </form>
-                            </table>
+                        <br><br>
+                        <div class="card-deck">
+                            <div class="card">
+                                <img src="assets/images/anggie.png" class="card-img-top" alt="Anggie Tamara" onclick="return alert('Jangan lupa vaksin ya teman-teman');">
+                                <div class=" card-body">
+                                    <h5 class="card-title" align="center">Backend</h5>
+                                    <hr>
+                                    <p class="card-text">
+                                        Anggie Tamara<br>
+                                        1917051006
+                                    </p>
+                                    <br>
+                                    <center>
+                                        <a href="https://web.facebook.com/spachieto"><img src="assets/icons/facebook.png" width="25px"></a>
+                                        <a href="https://www.instagram.com/gietmra_/"><img src="assets/icons/instagram.png" width="25px"></a>
+                                        <a href="https://www.youtube.com/channel/UC6W1IryazZBDKISiuSkx-rQ"><img src="assets/icons/youtube.png" width="30px"></a>
+                                        <a href="https://github.com/achieto"><img src="assets/icons/github.png" width="25px"></a>
+                                    </center>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="assets/images/lase.png" class="card-img-top" alt="Anisa Nadila Lase"
+                                onclick="return alert('Aku frontend loh');">
+                                <div class="card-body">
+                                    <h5 class="card-title" align="center">Frontend</h5>
+                                    <hr>
+                                    <p class="card-text">
+                                        Anisa Nadila Lase<br>
+                                        1917051003
+                                    </p>
+                                    <br>
+                                    <center>
+                                        <a href="https://web.facebook.com/anisanadila.lase"><img src="assets/icons/facebook.png" width="25px"></a>
+                                        <a href="https://www.instagram.com/ans.ndlals/"><img src="assets/icons/instagram.png" width="25px"></a>
+                                        <a href="https://www.youtube.com/channel/UCnN_i-dIOjwv1phVqzB-2xg"><img src="assets/icons/youtube.png" width="30px"></a>
+                                        <a href="https://github.com/AnisaNadila26"><img src="assets/icons/github.png" width="25px"></a>
+                                    </center>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="assets/images/aprila.png" class="card-img-top" alt="Aprila Dwi Utami"
+                                onclick="return alert('aku princess');">
+                                <div class="card-body">
+                                    <h5 class="card-title" align="center">Database</h5>
+                                    <hr>
+                                    <p class="card-text">
+                                        April Dwi Utami<br>
+                                        1917051012
+                                    </p>
+                                    <br>
+                                    <center>
+                                        <a href="https://web.facebook.com/aprila.d.utami.3"><img src="assets/icons/facebook.png" width="25px"></a>
+                                        <a href="https://www.instagram.com/apriladwiutami/"><img src="assets/icons/instagram.png" width="25px"></a>
+                                        <a href="https://www.youtube.com/channel/UC7fR2jqBOozSE1uZsiE7Iag"><img src="assets/icons/youtube.png" width="30px"></a>
+                                        <a href="https://github.com/apriladwiutami"><img src="assets/icons/github.png" width="25px"></a>
+                                    </center>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <script>
-                        document.getElementById('kategori').onchange = function() {
-                            if (this.value == 'Non-Tenaga Medis') {
-                                document.getElementById('3').disabled = true;
-                            } else {
-                                document.getElementById('3').disabled = false;
-                            }
-                        }
-                    </script>
                 </div>
                 <!-- /.container-fluid -->
 
@@ -462,8 +374,7 @@
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -481,4 +392,4 @@
         </div>
     </div>
 
-<?php $this->endSection(); ?>
+    <?php $this->endSection(); ?>
