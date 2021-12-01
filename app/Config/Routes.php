@@ -35,7 +35,8 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Templating::login');
-$routes->get('/admin', 'Templating::index');
+$routes->get('/admin', 'Templating::admin');
+$routes->get('/super', 'Templating::super');
 $routes->get('/about', 'Templating::about');
 $routes->get('/home', 'VaksinController::index');
 $routes->post('/login_action', 'Login::login_action');
