@@ -23,4 +23,12 @@ class Templating extends BaseController
         echo view('layouts/v_header', $data);
         echo view('v_login');
 	}
+
+	public function about()
+	{
+		$data = [
+			'title' => "About",
+		];
+        return view('v_about', $data);
+	}
 }

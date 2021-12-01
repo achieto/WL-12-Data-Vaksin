@@ -43,14 +43,15 @@
                     <span>Input Entry</span></a>
             </li>
 
-            <li class="nav-item active">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Entry</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header active">Region:</h6>
+                        <h6 class="collapse-header">Region:</h6>
                         <a class="collapse-item" href="/wilayah1">Region 1</a>
                         <a class="collapse-item" href="/wilayah2">Region 2</a>
                         <a class="collapse-item" href="/wilayah3">Region 3</a>
@@ -68,8 +69,8 @@
             </div>
 
             <!-- Nav Item - About -->
-            <li class="nav-item">
-                <a class="nav-link" href="/about">
+            <li class="nav-item active">
+                <a class="nav-link" href="charts.html">
                     <i class="fas fa-info-circle"></i>
                     <span>About</span></a>
             </li>
@@ -125,48 +126,63 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <div id="container">
-                        <h1>Data Vaksin Wilayah 4 <br></br></h1>
+                    <div id="cont" style="padding: 6px;">
+                        <h1>Tentang Pengembang</h1>
 
-                        <div id="body">
-                            <table style="text-align:center" class="table table-striped" width="1200px">
-                                <tr>
-                                    <td scope="col">No.Batch</td>
-                                    <td scope="col">NIK</td>
-                                    <td scope="col">Nama</td>
-                                    <td scope="col">Jenis Kelamin</td>
-                                    <td scope="col">Usia</td>
-                                    <td scope="col">Dosis</td>
-                                    <td scope="col">Jenis Vaksin</td>
-                                    <td scope="col">Action</td>
-                                </tr>
-                                <?php
-                                $db = \Config\Database::connect();
-                                $db = db_connect();
-                                $vaksinasi = $db->query('SELECT * FROM vaksinasi WHERE wilayah = "4"');
-                                foreach ($vaksinasi->getResult() as $row) :
-                                ?>
-                                    <tr>
-                                        <td scope="row"><?= strtoupper($row->no_batch) ?></td>
-                                        <td scope="row"><?= $row->nik ?></td>
-                                        <td scope="row"><?= $row->nama ?></td>
-                                        <td scope="row"><?= $row->jenis_kelamin ?></td>
-                                        <td scope="row"><?= $row->usia ?></td>
-                                        <td scope="row"><?= $row->dosis ?></td>
-                                        <td scope="row"><?= $row->jenis_vaksin ?></td>
-                                        <td scope="row" style="text-align:center">
-                                            <a href="<?= base_url("edit/" . $row->no_batch) ?>" class="btn btn-primary" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" role="button">Edit</a>
-                                            <form action="delete/<?= $row->no_batch ?>/<?= $row->wilayah ?>" method="post" class="d-inline">
-                                                <?= csrf_field(); ?>
-                                                <input type="hidden" name="_method" value="Delete">
-                                                <button type="submit" class="btn btn-danger" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" onclick="return confirm('Apakah anda yakin menghapus Post ini ?'); ">Delete</button>
-                                            </form>
-                                        </td>
-                                    </tr>
-                                <?php endforeach; ?>
-                            </table>
+                        <br><br>
+                        <div class="card-deck">
+                            <div class="card">
+                                <img src="assets/images/anggie.png" class="card-img-top" alt="Anggie Tamara">
+                                <div class="card-body">
+                                    <h5 class="card-title" align="center">Backend</h5><hr>
+                                    <p class="card-text">
+                                        Anggie Tamara<br>
+                                        1917051006
+                                    </p>
+                                    <br>
+                                    <center>
+                                        <a href="https://web.facebook.com/spachieto"><img src="assets/icons/facebook.png" width="25px"></a>
+                                        <a href="https://www.instagram.com/gietmra_/"><img src="assets/icons/instagram.png" width="25px"></a>
+                                        <a href="https://www.youtube.com/channel/UC6W1IryazZBDKISiuSkx-rQ"><img src="assets/icons/youtube.png" width="30px"></a>
+                                        <a href="https://github.com/achieto"><img src="assets/icons/github.png" width="25px"></a>
+                                    </center>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="assets/images/lase.png" class="card-img-top" alt="Anisa Nadila Lase">
+                                <div class="card-body">
+                                <h5 class="card-title" align="center">Frontend</h5><hr>
+                                    <p class="card-text">
+                                        Anisa Nadila Lase<br>
+                                        1917051003
+                                    </p>
+                                    <br>
+                                    <center>
+                                        <a href="https://web.facebook.com/anisanadila.lase"><img src="assets/icons/facebook.png" width="25px"></a>
+                                        <a href="https://www.instagram.com/ans.ndlals/"><img src="assets/icons/instagram.png" width="25px"></a>
+                                        <a href="https://www.youtube.com/channel/UCnN_i-dIOjwv1phVqzB-2xg"><img src="assets/icons/youtube.png" width="30px"></a>
+                                        <a href="https://github.com/AnisaNadila26"><img src="assets/icons/github.png" width="25px"></a>
+                                    </center>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="assets/images/aprila.png" class="card-img-top" alt="Aprila Dwi Utami">
+                                <div class="card-body">
+                                <h5 class="card-title" align="center">Database</h5><hr>
+                                    <p class="card-text">
+                                        April Dwi Utami<br>
+                                        1917051012
+                                    </p>
+                                    <br>
+                                    <center>
+                                        <a href="https://web.facebook.com/aprila.d.utami.3"><img src="assets/icons/facebook.png" width="25px"></a>
+                                        <a href="https://www.instagram.com/apriladwiutami/"><img src="assets/icons/instagram.png" width="25px"></a>
+                                        <a href="https://www.youtube.com/channel/UC7fR2jqBOozSE1uZsiE7Iag"><img src="assets/icons/youtube.png" width="30px"></a>
+                                        <a href="https://github.com/apriladwiutami"><img src="assets/icons/github.png" width="25px"></a>
+                                    </center>
+                                </div>
+                            </div>
                         </div>
-
                     </div>
                 </div>
                 <!-- /.container-fluid -->
@@ -198,7 +214,8 @@
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -216,4 +233,4 @@
         </div>
     </div>
 
-    <?php $this->endSection(); ?>
+<?php $this->endSection(); ?>

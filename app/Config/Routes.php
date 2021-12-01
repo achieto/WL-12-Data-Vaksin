@@ -36,6 +36,7 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Templating::login');
 $routes->get('/admin', 'Templating::index');
+$routes->get('/about', 'Templating::about');
 $routes->get('/home', 'VaksinController::index');
 $routes->post('/login_action', 'Login::login_action');
 $routes->get('/wilayah1', 'VaksinController::wil1');
