@@ -28,6 +28,7 @@ class VaksinController extends BaseController
 		$data = [
 			'title' => "Region 1",
 		];
+
 		return view("wilayah/v_wilayah1", $data);
 	}
 
