@@ -14,8 +14,8 @@ class AdminModel extends Model
         // $log = $builder->get()->getRow;
         // return $log;
     }
-    // protected $table                = 'login';
-    // protected $primaryKey           = 'username';
-    // protected $allowedFields        = ['username', 'password', 'nama'];
+    protected $table                = 'login';
+    protected $primaryKey           = 'username';
+    protected $allowedFields        = ['username', 'password', 'nama'];
     // protected $useTimestamp            = true;
 }

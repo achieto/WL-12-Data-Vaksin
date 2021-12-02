@@ -13,18 +13,16 @@ class Login extends BaseController
 
 	public function login_action()
 	{
+        $session = session();
 		$admin = new AdminModel();
-
 		// $table = 'admin';
 		$username = $this->request->getPost('username');
 		// $this->request->getPost('Username');
 		$password = $this->request->getPost('password');
 		// $this->request->getPost('Password');
+		//$cek = $admin->get_data($username, $password);
 		$cek = $admin->get_data($username, $password);
-
-
-		$cek = $admin->get_data($username, $password);
-		if ($cek != null) {
+		if ($cek == null) {
 			if(($cek['username'] == "admin") && ($cek['password'] == "admin123")) {
 				session()->set('username', $cek['username']);
 				session()->set('password', $cek['password']);
@@ -37,19 +35,20 @@ class Login extends BaseController
 			} 
 			else 
 			{
-				session()->setFlashdata('gagal', 'Username/Password salah');
-				return redirect()->to(base_url('login'));
+				session()->setFlashdata('msg', 'Username/Password salah');
+				return redirect()->to(base_url('/'));
 			}
 		}else {
-			session()->setFlashdata('gagal', 'Username/Password salah');
-			return redirect()->to(base_url('login'));
+			session()->setFlashdata('msg', 'Username/Password salah');
+			return redirect()->to(base_url('/'));
 		}
 	}
 
 	public function logout()
 	{
-		session()->destroy();
-		return redirect()->to(base_url('/login'));
+        $session = session();
+		//session()->destroy();
+		return redirect()->to(base_url('/'));
 	}
 		// $row = $model->get_data($username, $table);
 		//var_dump($row);
