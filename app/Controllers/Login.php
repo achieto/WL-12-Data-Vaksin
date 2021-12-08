@@ -22,23 +22,11 @@ class Login extends BaseController
 		$cek = $admin->get_data($username, $password);
 
 		if ($cek != null) {
-			if(($cek['username'] == $username) && ($cek['password'] == $password)) {
-				$login = [
+			$login = [
 					'username' => $username
 				];
 				session()->set($login);
 				return redirect()->to(base_url('admin'));
-			} 
-			// else if(($cek['username'] == "superadmin") && ($cek['password'] == "super123")) {
-			// 	session()->set('username', $cek['username']);
-			// 	session()->set('password', $cek['password']);
-			// 	return redirect()->to(base_url('super'));
-			// } 
-			else 
-			{
-				session()->setFlashdata('gagal', 'Username/Password salah');
-				return redirect()->to(base_url('/'));
-			}
 		} else {
 			session()->setFlashdata('gagal', 'Username/Password salah');
 			return redirect()->to(base_url('/'));
