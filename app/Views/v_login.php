@@ -39,6 +39,13 @@
                                         </button>
                                         <hr>
                                     </form>
+                                    <p>
+                                        <?php if (!empty(session()->getFlashData('gagal'))) { ?>
+                                            <div class="alert alert-warning">
+                                                <?php echo session()->getFlashData('gagal') ?>
+                                            </div>
+                                        <?php } ?>
+                                    </p>
                                 </div>
                             </div>
                         </div>

@@ -15,6 +15,8 @@ class Login extends BaseController
 
 	public function login_action()
 	{
+		$session = \Config\Services::session();
+		$session = session();
 		$admin = new AdminModel();
 		$super = new SuperModel();
 		// $table = 'admin';
