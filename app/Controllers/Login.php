@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers;
 use App\Models\AdminModel;
-use App\Models\SuperAdmin;
+use App\Models\SuperModel;
 class Login extends BaseController
 {
 	public function index()
@@ -27,26 +27,23 @@ class Login extends BaseController
 		$ceksuper = $super->get_data($username, $password);
 		if ($cek != null) {
 			
-				$login = [
-					'username' => $username
-				];
-				session()->set($login);
-				return redirect()->to(base_url('admin'));
-	
-		} else {
-			session()->setFlashdata('gagal', 'Username/Password salah');
-			return redirect()->to(base_url('/'));
-		}
-		if ($ceksuper != null) {
 			$login = [
-					'username' => $username
-				];
-				session()->set($login);
-				return redirect()->to(base_url('super'));
-		} else {
+				'username' => $username
+			];
+			session()->set($login);
+			return redirect()->to(base_url('admin'));
+
+		} else if ($ceksuper != null) {
+			$login = [
+			'username' => $username
+			];
+			session()->set($login);
+			return redirect()->to(base_url('super'));
+		}
+		else {
 			session()->setFlashdata('gagal', 'Username/Password salah');
 			return redirect()->to(base_url('/'));
-		}
+	}
 	}
 
 	public function logout()
