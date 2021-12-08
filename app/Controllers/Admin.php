@@ -8,6 +8,6 @@ class Admin extends BaseController
 			session()->setFlashdata('gagal', 'Anda belum login');
 			return redirect()->to(base_url('/'));
 		}
-		return view('v_beranda');
+		return view('v_admin');
 	}
 }
