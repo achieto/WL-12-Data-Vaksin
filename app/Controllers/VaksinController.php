@@ -5,9 +5,11 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\VaksinModel;
 
+// $session = session();
+
 class VaksinController extends BaseController
 {
-	protected $VaksintModel;
+	protected $VaksinModel;
 
 	public function __construct()
 	{
@@ -16,10 +18,11 @@ class VaksinController extends BaseController
 
 	public function index()
 	{
-		if(session()->get('username')==''){
-			session()->setFlashData('gagal', 'Anda Belum Login');
-			return redirect()->to(base_url('login'));
+		if (session()->get('username') == '') {
+			session()->setFlashdata('gagal', 'Anda belum login');
+			return redirect()->to(base_url('/'));
 		}
+		
 		$VaksinModel = model("VaksinModel");
 		$data = [
 			'vaksinasi' => $VaksinModel->findAll()
@@ -29,10 +32,11 @@ class VaksinController extends BaseController
 
 	public function wil1()
 	{
-		if(session()->get('username')==''){
-			session()->setFlashData('gagal', 'Anda Belum Login');
-			return redirect()->to(base_url('login'));
+		if (session()->get('username') == '') {
+			session()->setFlashdata('gagal', 'Anda belum login');
+			return redirect()->to(base_url('/'));
 		}
+
 		$data = [
 			'wilayah1' => $this->VaksinModel->where('wilayah', '1')->findAll(),
 			'title' => "Region 1",
@@ -43,10 +47,11 @@ class VaksinController extends BaseController
 
 	public function wil2()
 	{
-		if(session()->get('username')==''){
-			session()->setFlashData('gagal', 'Anda Belum Login');
-			return redirect()->to(base_url('login'));
+		if (session()->get('username') == '') {
+			session()->setFlashdata('gagal', 'Anda belum login');
+			return redirect()->to(base_url('/'));
 		}
+
 		$data = [
 			'wilayah2' => $this->VaksinModel->where('wilayah', '2')->findAll(),
 			'title' => "Region 2",
@@ -56,10 +61,11 @@ class VaksinController extends BaseController
 
 	public function wil3()
 	{
-		if(session()->get('username')==''){
-			session()->setFlashData('gagal', 'Anda Belum Login');
-			return redirect()->to(base_url('login'));
+		if (session()->get('username') == '') {
+			session()->setFlashdata('gagal', 'Anda belum login');
+			return redirect()->to(base_url('/'));
 		}
+
 		$data = [
 			'wilayah3' => $this->VaksinModel->where('wilayah', '3')->findAll(),
 			'title' => "Region 3",
@@ -69,10 +75,11 @@ class VaksinController extends BaseController
 
 	public function wil4()
 	{
-		if(session()->get('username')==''){
-			session()->setFlashData('gagal', 'Anda Belum Login');
-			return redirect()->to(base_url('login'));
+		if (session()->get('username') == '') {
+			session()->setFlashdata('gagal', 'Anda belum login');
+			return redirect()->to(base_url('/'));
 		}
+
 		$data = [
 			'wilayah4' => $this->VaksinModel->where('wilayah', '4')->findAll(),
 			'title' => "Region 4",
@@ -82,10 +89,11 @@ class VaksinController extends BaseController
 
 	public function create()
 	{
-		if(session()->get('username')==''){
-			session()->setFlashData('gagal', 'Anda Belum Login');
-			return redirect()->to(base_url('login'));
+		if (session()->get('username') == '') {
+			session()->setFlashdata('gagal', 'Anda belum login');
+			return redirect()->to(base_url('/'));
 		}
+
 		$data = [
 			'title' => "Input Entry",
 		];
@@ -130,10 +138,11 @@ class VaksinController extends BaseController
 
 	public function edit($no_batch)
 	{
-		if(session()->get('username')==''){
-			session()->setFlashData('gagal', 'Anda Belum Login');
-			return redirect()->to(base_url('login'));
+		if (session()->get('username') == '') {
+			session()->setFlashdata('gagal', 'Anda belum login');
+			return redirect()->to(base_url('/'));
 		}
+
 		$data = [
 			'title' => "Edit Entry",
 			'row' => $this->VaksinModel->getVaksin($no_batch)
