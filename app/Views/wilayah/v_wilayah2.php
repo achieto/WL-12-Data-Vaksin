@@ -101,17 +101,15 @@
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
-    
+
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-800">Admin</span>
                                 <i class="fa fa-user-md mr-2 text-gray-800"></i>
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
@@ -141,22 +139,19 @@
                                     <td scope="col">Action</td>
                                 </tr>
                                 <?php
-                                $db = \Config\Database::connect();
-                                $db = db_connect();
-                                $vaksinasi = $db->query('SELECT * FROM vaksinasi WHERE wilayah = "2"');
-                                foreach ($vaksinasi->getResult() as $row) :
+                                foreach ($wilayah2 as $row) :
                                 ?>
                                     <tr>
-                                        <td scope="row"><?= strtoupper($row->no_batch) ?></td>
-                                        <td scope="row"><?= $row->nik ?></td>
-                                        <td scope="row"><?= $row->nama ?></td>
-                                        <td scope="row"><?= $row->jenis_kelamin ?></td>
-                                        <td scope="row"><?= $row->usia ?></td>
-                                        <td scope="row"><?= $row->dosis ?></td>
-                                        <td scope="row"><?= $row->jenis_vaksin ?></td>
+                                        <td scope="row"><?= strtoupper($row['no_batch']) ?></td>
+                                        <td scope="row"><?= $row['nik'] ?></td>
+                                        <td scope="row"><?= $row['nama'] ?></td>
+                                        <td scope="row"><?= $row['jenis_kelamin'] ?></td>
+                                        <td scope="row"><?= $row['usia'] ?></td>
+                                        <td scope="row"><?= $row['dosis'] ?></td>
+                                        <td scope="row"><?= $row['jenis_vaksin'] ?></td>
                                         <td scope="row" style="text-align:center">
-                                            <a href="<?= base_url("edit/" . $row->no_batch) ?>" class="btn btn-primary" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" role="button">Edit</a>
-                                            <form action="delete/<?= $row->no_batch ?>/<?= $row->wilayah ?> ?>" method="post" class="d-inline">
+                                            <a href="<?= base_url("edit/" . $row['no_batch']) ?>" class="btn btn-primary" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" role="button">Edit</a>
+                                            <form action="delete/<?= $row['no_batch'] ?>/<?= $row['wilayah'] ?>" method="post" class="d-inline">
                                                 <?= csrf_field(); ?>
                                                 <input type="hidden" name="_method" value="Delete">
                                                 <button type="submit" class="btn btn-danger" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" onclick="return confirm('Apakah anda yakin menghapus Post ini ?'); ">Delete</button>
@@ -209,7 +204,7 @@
                 <div class="modal-body">Tekan tombol "Logout" jika anda yakin ingin keluar.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="/">Logout</a>
+                    <a class="btn btn-primary" href="/login">Logout</a>
                 </div>
             </div>
         </div>

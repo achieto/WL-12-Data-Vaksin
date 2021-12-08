@@ -9,14 +9,27 @@ class Templating extends BaseController
 {
     public function admin()
 	{
+		if(session()->get('username')==''){
+			session()->setFlashData('gagal', 'Anda Belum Login');
+			return redirect()->to(base_url('login'));
+		}
+		$VaksinModel = model("VaksinModel");
 		$data = [
 			'title' => "Home",
+			'wilayah1' => $VaksinModel->where('wilayah', '1')->findAll(),
+			'wilayah2' => $VaksinModel->where('wilayah', '2')->findAll(),
+			'wilayah3' => $VaksinModel->where('wilayah', '3')->findAll(),
+			'wilayah4' => $VaksinModel->where('wilayah', '4')->findAll(),
 		];
 		return view('v_admin', $data);
 	}
 
 	public function super()
 	{
+		if(session()->get('username')==''){
+			session()->setFlashData('gagal', 'Anda Belum Login');
+			return redirect()->to(base_url('login'));
+		}
 		$data = [
 			'title' => "Home",
 		];
@@ -34,6 +47,10 @@ class Templating extends BaseController
 
 	public function about()
 	{
+		if(session()->get('username')==''){
+			session()->setFlashData('gagal', 'Anda Belum Login');
+			return redirect()->to(base_url('login'));
+		}
 		$data = [
 			'title' => "About",
 		];

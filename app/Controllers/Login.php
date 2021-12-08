@@ -13,13 +13,16 @@ class Login extends BaseController
 
 	public function login_action()
 	{
+		$session = \Config\Services::session();
+		$session = session();
 		$admin = new AdminModel();
-
 		// $table = 'admin';
 		$username = $this->request->getPost('username');
 		// $this->request->getPost('Username');
 		$password = $this->request->getPost('password');
 		// $this->request->getPost('Password');
+		$cek = $admin->get_data($username, $password);
+
 
 		$cek = $admin->get_data($username, $password);
 		if ($cek != null) {
