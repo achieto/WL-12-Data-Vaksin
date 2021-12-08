@@ -7,6 +7,11 @@ class Login extends Migration
 	public function up()
 	{
 		$this->forge->addField([
+			'id'				=> [
+				'type'           => 'INT',
+				'constraint'     => 11,
+				'auto_increment' => true,
+			],
 			'username'          => [
 				'type'           => 'VARCHAR',
 				'constraint'     => '30',
@@ -22,7 +27,7 @@ class Login extends Migration
 			
 			
 		]);
-		$this->forge->addPrimaryKey('username', true);
+		$this->forge->addKey('id', true);
 		$this->forge->createTable('login');
 	}
 

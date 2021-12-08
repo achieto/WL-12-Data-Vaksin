@@ -28,6 +28,7 @@ class BaseController extends Controller
 	 * @var IncomingRequest|CLIRequest
 	 */
 	protected $request;
+	protected $db, $md;
 
 	/**
 	 * An array of helpers to be loaded automatically upon
@@ -54,5 +55,7 @@ class BaseController extends Controller
 		// Preload any models, libraries, etc, here.
 		//--------------------------------------------------------------------
 		// E.g.: $this->session = \Config\Services::session();
+		$this->db=db_connect();
+		$this->md=model('AdminModel',true,$this->db);
 	}
 }

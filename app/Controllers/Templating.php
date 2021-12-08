@@ -1,11 +1,7 @@
 <?php
-
 namespace App\Controllers;
-
 use App\Controllers\BaseController;
 use App\Models\VaksinModel;
-
-
 class Templating extends BaseController
 {
     public function admin()

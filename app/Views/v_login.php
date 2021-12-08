@@ -19,15 +19,20 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                     </div>
+                                    <?php
+                                    if(session()->getFlashdata('gagal')):?>
+                                    <div class="alert alert-danger">
+                                        <?= session()->getFlashdata('gagal')?> </div>
+                                        <?php endif;?>
                                     <form method="POST" action="<?= base_url('login/login_action'); ?>">
                                         <div class="form-group">
                                             <input type="username" name="username" class="form-control form-control-user"
                                                 id="username"
-                                                placeholder="Username">
+                                                placeholder="Masukkan Username">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" name="password" class="form-control form-control-user"
-                                                id="password" placeholder="Password">
+                                                id="password" placeholder="Masukkan Password">
                                         </div>
                                         <button type="submit" name="login" class="btn btn-primary btn-user btn-block">
                                             Login

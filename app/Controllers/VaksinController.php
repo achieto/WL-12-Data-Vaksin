@@ -1,18 +1,18 @@
 <?php
-
 namespace App\Controllers;
-
 use App\Controllers\BaseController;
 use App\Models\VaksinModel;
-
 // $session = session();
-
 class VaksinController extends BaseController
 {
 	protected $VaksinModel;
 
 	public function __construct()
 	{
+		if(session()->get('username')==''){
+			session()->setFlashData('gagal', 'Anda Belum Login');
+			return redirect()->to(base_url('login'));
+		}
 		$this->VaksinModel = new VaksinModel();
 	}
 
