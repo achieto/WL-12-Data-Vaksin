@@ -5,10 +5,16 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\VaksinModel;
 
+
 class Templating extends BaseController
 {
     public function admin()
 	{
+		if (session()->get('username') == '') {
+			session()->setFlashdata('gagal', 'Anda belum login');
+			return redirect()->to(base_url('/'));
+		}
+
 		$VaksinModel = model("VaksinModel");
 		$data = [
 			'title' => "Home",
@@ -22,6 +28,11 @@ class Templating extends BaseController
 
 	public function super()
 	{
+		if (session()->get('username') == '') {
+			session()->setFlashdata('gagal', 'Anda belum login');
+			return redirect()->to(base_url('/'));
+		}
+
 		$data = [
 			'title' => "Home",
 		];
@@ -30,6 +41,10 @@ class Templating extends BaseController
 
     public function login()
 	{
+		if (!session()->get('username') == '') {
+			return redirect()->to(base_url('admin'));
+		}
+		
 		$data = [
 			'title' => "Login",
 		];
@@ -39,6 +54,11 @@ class Templating extends BaseController
 
 	public function about()
 	{
+		if (session()->get('username') == '') {
+			session()->setFlashdata('gagal', 'Anda belum login');
+			return redirect()->to(base_url('/'));
+		}
+
 		$data = [
 			'title' => "About",
 		];

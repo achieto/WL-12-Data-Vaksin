@@ -158,83 +158,91 @@
 
                             <!-- Earnings (Monthly) Card Example -->
                             <div class="col-xl-3 col-md-6 mb-4">
-                                <div class="card border-left-danger shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
-                                                    Wilayah 1</div>
-                                                <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                                    <?= $count1 ?>
+                                <a href="wilayah1">
+                                    <div class="card border-left-danger shadow h-100 py-2">
+                                        <div class="card-body">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col mr-2">
+                                                    <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                                                        Wilayah 1</div>
+                                                    <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                        <?= $count1 ?>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <i class="fas fa-map-marker-alt text-danger" style="font-size:48px"></i>
+                                                <div class="col-auto">
+                                                    <i class="fas fa-map-marker-alt text-danger" style="font-size:48px"></i>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
 
                             <!-- Earnings (Monthly) Card Example -->
                             <div class="col-xl-3 col-md-6 mb-4">
-                                <div class="card border-left-success shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                    Wilayah 2</div>
-                                                <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                                    <?= $count2 ?>
+                                <a href="wilayah2">
+                                    <div class="card border-left-success shadow h-100 py-2">
+                                        <div class="card-body">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col mr-2">
+                                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                        Wilayah 2</div>
+                                                    <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                        <?= $count2 ?>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <i class="fas fa-map-marker-alt text-success" style="font-size:48px"></i>
+                                                <div class="col-auto">
+                                                    <i class="fas fa-map-marker-alt text-success" style="font-size:48px"></i>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
 
                             <!-- Earnings (Monthly) Card Example -->
                             <div class="col-xl-3 col-md-6 mb-4">
-                                <div class="card border-left-info shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                                    Wilayah 3</div>
-                                                <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                                    <?= $count3 ?>
+                                <a href="wilayah3">
+                                    <div class="card border-left-info shadow h-100 py-2">
+                                        <div class="card-body">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col mr-2">
+                                                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                                        Wilayah 3</div>
+                                                    <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                        <?= $count3 ?>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <i class="fas fa-map-marker-alt text-info" style="font-size:48px"></i>
+                                                <div class="col-auto">
+                                                    <i class="fas fa-map-marker-alt text-info" style="font-size:48px"></i>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
 
 
                             <!-- Pending Requests Card Example -->
                             <div class="col-xl-3 col-md-6 mb-4">
-                                <div class="card border-left-warning shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                    Wilayah 4</div>
-                                                <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                                    <?= $count4 ?>
+                                <a href="wilayah4">
+                                    <div class="card border-left-warning shadow h-100 py-2">
+                                        <div class="card-body">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col mr-2">
+                                                    <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                        Wilayah 4</div>
+                                                    <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                        <?= $count4 ?>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <i class="fas fa-map-marker-alt text-warning" style="font-size:48px"></i>
+                                                <div class="col-auto">
+                                                    <i class="fas fa-map-marker-alt text-warning" style="font-size:48px"></i>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
 
@@ -407,7 +415,7 @@
                 <div class="modal-body">Tekan tombol "Logout" jika anda yakin ingin keluar.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="/">Logout</a>
+                    <a class="btn btn-primary" href="/logout">Logout</a>
                 </div>
             </div>
         </div>

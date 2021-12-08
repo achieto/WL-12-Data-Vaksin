@@ -40,6 +40,7 @@ $routes->get('/super', 'Templating::super');
 $routes->get('/about', 'Templating::about');
 $routes->get('/home', 'VaksinController::index');
 $routes->post('/login_action', 'Login::login_action');
+$routes->get('/logout', 'Login::logout');
 $routes->get('/wilayah1', 'VaksinController::wil1');
 $routes->get('/wilayah2', 'VaksinController::wil2');
 $routes->get('/wilayah3', 'VaksinController::wil3');
@@ -49,7 +50,6 @@ $routes->post('/store', 'VaksinController::store');
 $routes->get('/edit/(:any)', 'VaksinController::edit/$1');
 $routes->post('/update/(:any)/(:any)', 'VaksinController::update/$1/$2');
 $routes->delete('/delete/(:any)/(:any)', 'VaksinController::delete/$1/$2');
-$routes->post('/login_action', 'Login::login_action');
 
 /*
  * --------------------------------------------------------------------
