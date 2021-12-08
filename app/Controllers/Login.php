@@ -1,6 +1,7 @@
 <?php
 namespace App\Controllers;
 use App\Models\AdminModel;
+use App\Models\SuperModel;
 class Login extends BaseController
 {
 	public function index()
@@ -15,22 +16,33 @@ class Login extends BaseController
 	public function login_action()
 	{
 		$admin = new AdminModel();
+		$super = new SuperModel();
 		// $table = 'admin';
 		$username = $this->request->getPost('username');
 		$password = $this->request->getPost('password');
 
 		$cek = $admin->get_data($username, $password);
-
+		$ceksuper = $super->get_data($username, $password);
 		if ($cek != null) {
-			$login = [
+			
+				$login = [
 					'username' => $username
 				];
 				session()->set($login);
 				return redirect()->to(base_url('admin'));
-		} else {
+	
+		} else if ($ceksuper != null) {
+			$login = [
+				'username' => $username
+			];
+			session()->set($login);
+			return redirect()->to(base_url('super'));
+		}
+		else {
 			session()->setFlashdata('gagal', 'Username/Password salah');
 			return redirect()->to(base_url('/'));
 		}
+
 	}
 
 	public function logout()
