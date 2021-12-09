@@ -40,7 +40,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="/inputadmin">
                     <i class="fas fa-edit"></i>
-                    <span>Input Entry</span></a>
+                    <span>Input Admin</span></a>
             </li>
 
             <li class="nav-item">
