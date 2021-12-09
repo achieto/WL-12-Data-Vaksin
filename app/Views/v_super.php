@@ -38,17 +38,17 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="/input">
+                <a class="nav-link" href="/inputadmin">
                     <i class="fas fa-edit"></i>
                     <span>Input Entry</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link" href="/home">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Entry</span>
                 </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <!-- <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Region:</h6>
                         <a class="collapse-item" href="/wilayah1">Region 1</a>
@@ -56,7 +56,7 @@
                         <a class="collapse-item" href="/wilayah3">Region 3</a>
                         <a class="collapse-item" href="/wilayah4">Region 4</a>
                     </div>
-                </div>
+                </div> -->
             </li>
 
             <!-- Divider -->
@@ -101,17 +101,15 @@
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
-    
+
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-800">Super Admin</span>
                                 <i class="fa fa-user-md mr-2 text-gray-800"></i>
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
@@ -132,86 +130,86 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    
+
                     <div id="cont" style="padding: 6px;">
                         <h1>Dashboard</h1>
                         <br>
 
-                     <!-- Content Row -->
-                     <div class="row">
+                        <!-- Content Row -->
+                        <div class="row">
 
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-danger shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
-                                                Wilayah 1</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">3</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-map-marker-alt text-danger" style="font-size:48px"></i>
+                            <!-- Earnings (Monthly) Card Example -->
+                            <div class="col-xl-3 col-md-6 mb-4">
+                                <div class="card border-left-danger shadow h-100 py-2">
+                                    <div class="card-body">
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col mr-2">
+                                                <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                                                    Wilayah 1</div>
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800">3</div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <i class="fas fa-map-marker-alt text-danger" style="font-size:48px"></i>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Wilayah 2</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">6</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-map-marker-alt text-success" style="font-size:48px"></i>
+                            <!-- Earnings (Monthly) Card Example -->
+                            <div class="col-xl-3 col-md-6 mb-4">
+                                <div class="card border-left-success shadow h-100 py-2">
+                                    <div class="card-body">
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col mr-2">
+                                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                    Wilayah 2</div>
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800">6</div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <i class="fas fa-map-marker-alt text-success" style="font-size:48px"></i>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                                Wilayah 3</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">12</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-map-marker-alt text-info" style="font-size:48px"></i>
+                            <!-- Earnings (Monthly) Card Example -->
+                            <div class="col-xl-3 col-md-6 mb-4">
+                                <div class="card border-left-info shadow h-100 py-2">
+                                    <div class="card-body">
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col mr-2">
+                                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                                    Wilayah 3</div>
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800">12</div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <i class="fas fa-map-marker-alt text-info" style="font-size:48px"></i>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
 
-                        <!-- Pending Requests Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Wilayah 4</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">19</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-map-marker-alt text-warning" style="font-size:48px"></i>
+                            <!-- Pending Requests Card Example -->
+                            <div class="col-xl-3 col-md-6 mb-4">
+                                <div class="card border-left-warning shadow h-100 py-2">
+                                    <div class="card-body">
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col mr-2">
+                                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                    Wilayah 4</div>
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800">19</div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <i class="fas fa-map-marker-alt text-warning" style="font-size:48px"></i>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
                         </div>
 
                         <!-- Content Row -->
@@ -237,7 +235,7 @@
                                             <li class="list-group-item"><a href="#sebelum">Sebelum menerima vaksin</a></li>
                                             <li class="list-group-item"><a href="#saat">Saat menerima vaksin</a></li>
                                             <li class="list-group-item"><a href="#setelah">Setelah menerima vaksin</a></li>
-                                        </ul>  
+                                        </ul>
                                     </center>
                                 </div>
                             </div>
@@ -284,8 +282,8 @@
                                 <div class="card-body">
                                     <article id="sebelum">
                                         <h2>Sebelum menerima vaksin</h2>
-                                        <p><strong>Cari tahu informasi akurat.</strong> Terdapat begitu banyak informasi keliru tentang vaksin di dunia maya. Sangat penting bahwa kita selalu merujuk kepada informasi dari sumber-sumber terpercaya 
-                                            seperti Kementerian Kesehatan, UNICEF, dan WHO.  Anggota masyarakat yang ragu tentang kondisinya  dapat berkonsultasi dengan dokter terlebih dahulu tentang boleh atau tidak menerima vaksin. Saat ini, secara umum, seseorang dengan kondisi berikut sebaiknya tidak menerima vaksin COVID-19 demi menghindari kejadian ikutan pasca vaksinasi (KIPI):
+                                        <p><strong>Cari tahu informasi akurat.</strong> Terdapat begitu banyak informasi keliru tentang vaksin di dunia maya. Sangat penting bahwa kita selalu merujuk kepada informasi dari sumber-sumber terpercaya
+                                            seperti Kementerian Kesehatan, UNICEF, dan WHO. Anggota masyarakat yang ragu tentang kondisinya dapat berkonsultasi dengan dokter terlebih dahulu tentang boleh atau tidak menerima vaksin. Saat ini, secara umum, seseorang dengan kondisi berikut sebaiknya tidak menerima vaksin COVID-19 demi menghindari kejadian ikutan pasca vaksinasi (KIPI):
                                         </p>
                                         <ul>
                                             <li>Orang dengan riwayat reaksi alergi berat terhadap kandungan vaksin COVID-19</li>
@@ -315,7 +313,7 @@
                                     <article id="setelah">
                                         <h2>Setelah menerima vaksin</h2>
                                         <p><strong>Ikuti prosedur pemantauan.</strong> Setelah vaksinasi, tenaga kesehatan biasanya meminta penerima vaksin menunggu sekitar 15 menit di lokasi untuk memastikan tidak ada reaksi atau KIPI yang bersifat segera. Perlu diketahui, KIPI serius amat sangat jarang terjadi.</p>
-                                        <p><strong>Tetap antisipasi reaksi vaksin.</strong> Vaksin bertujuan memberikan kekebalan tubuh tanpa harus terkena penyakit. Kekebalan tubuh dapat terbangun tanpa berbagai reaksi, namum terdapat pula beberapa gejala KIPI umum, yang  ringan hingga sedang, dan akan hilang dengan sendirinya dalam hitungan hari. </p>
+                                        <p><strong>Tetap antisipasi reaksi vaksin.</strong> Vaksin bertujuan memberikan kekebalan tubuh tanpa harus terkena penyakit. Kekebalan tubuh dapat terbangun tanpa berbagai reaksi, namum terdapat pula beberapa gejala KIPI umum, yang ringan hingga sedang, dan akan hilang dengan sendirinya dalam hitungan hari. </p>
                                         <p>Beberapa bentuk KIPI ringan hingga sedang yang mungkin dialami pasca vaksinasi adalah:</p>
                                         <ul>
                                             <li>Rasa pegal di sekitar area suntik</li>

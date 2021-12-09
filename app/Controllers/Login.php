@@ -50,4 +50,30 @@ class Login extends BaseController
 		session()->destroy();
 		return redirect()->to(base_url('/'));
 	}
+
+	public function create()
+	{
+		if (session()->get('username') == '') {
+			session()->setFlashdata('gagal', 'Anda belum login');
+			return redirect()->to(base_url('/'));
+		}
+
+		$data = [
+			'title' => "Input Entry",
+		];
+		return view('v_inputadmin', $data);
+	}
+
+	public function store() {
+		$data = [
+			'username' => $this->request->getVar('username'),
+			'password' => $this->request->getVar('password'),
+			'nama' => $this->request->getVar('nama'),
+		];
+
+		$AdminModel = model("AdminModel");
+		$AdminModel->insert($data);
+
+		return redirect()->to(base_url('/inputadmin'));
+	}
 }

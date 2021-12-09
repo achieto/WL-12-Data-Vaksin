@@ -23,8 +23,6 @@ class SuperAdmin extends Migration
 				'type'           => 'VARCHAR',
 				'constraint'     => '35',
 			],
-			
-			
 		]);
 		$this->forge->addKey('username', true);
 		$this->forge->createTable('loginsuper');

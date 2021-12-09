@@ -10,7 +10,7 @@ class VaksinModel extends Model
 {
 	protected $table                = 'vaksinasi';
 	protected $primaryKey           = 'no_batch';
-	protected $allowedFields        = ['no_batch', 'wilayah', 'nik', 'nama', 'jenis_kelamin', 'usia', 'kategori', 'dosis', 'jenis_vaksin', 'updated_at'];
+	protected $allowedFields        = ['no_batch', 'wilayah', 'nik', 'nama', 'jenis_kelamin', 'usia', 'kategori', 'dosis', 'jenis_vaksin', 'updated_at', 'status'];
 	protected $useTimestamp			= true;
 
 	public function getVaksin($no_batch = false)
