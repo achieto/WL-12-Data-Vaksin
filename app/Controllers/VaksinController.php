@@ -162,4 +162,13 @@ class VaksinController extends BaseController
 		$VaksinModel->update($no_batch, $data);
 		return redirect()->to(base_url('wilayah' . $wilayah));
 	}
+
+	public function cetak($no_batch)
+	{
+		$data = [
+			'row' => $this->VaksinModel->getVaksin($no_batch)
+		];
+
+		return view("cetak", $data);
+	}
 }

@@ -15,8 +15,6 @@ class Login extends BaseController
 
 	public function login_action()
 	{
-		$session = \Config\Services::session();
-		$session = session();
 		$admin = new AdminModel();
 		$super = new SuperModel();
 		// $table = 'admin';
@@ -27,15 +25,15 @@ class Login extends BaseController
 		$ceksuper = $super->get_data($username, $password);
 		if ($cek != null) {
 			
-			$login = [
-				'username' => $username
-			];
-			session()->set($login);
-			return redirect()->to(base_url('admin'));
-
+				$login = [
+					'username' => $username
+				];
+				session()->set($login);
+				return redirect()->to(base_url('admin'));
+	
 		} else if ($ceksuper != null) {
 			$login = [
-			'username' => $username
+				'username' => $username
 			];
 			session()->set($login);
 			return redirect()->to(base_url('super'));
@@ -43,7 +41,8 @@ class Login extends BaseController
 		else {
 			session()->setFlashdata('gagal', 'Username/Password salah');
 			return redirect()->to(base_url('/'));
-	}
+		}
+
 	}
 
 	public function logout()
