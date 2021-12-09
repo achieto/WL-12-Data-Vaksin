@@ -26,7 +26,7 @@ class SuperAdmin extends Migration
 			
 			
 		]);
-		$this->forge->addKey('id', true);
+		$this->forge->addKey('username', true);
 		$this->forge->createTable('loginsuper');
 	}
 
