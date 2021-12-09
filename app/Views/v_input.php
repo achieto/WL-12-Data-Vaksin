@@ -187,9 +187,6 @@
                                                     <input type="radio" name="jenis_kelamin" id="p" value="Perempuan" required>
                                                     <label for="p">Perempuan</label>
                                                 </td>
-                                                <!-- <td><input type="radio" name="jenis_kelamin" id="p" value="Perempuan" required>
-                                                    <label for="p">Perempuan</label>
-                                                </td> -->
                                             </tr>
                                             <tr>
                                                 <td>Usia</td>
