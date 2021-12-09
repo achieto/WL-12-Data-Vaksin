@@ -50,6 +50,10 @@ class Vaksinasi extends Migration
 			'updated_at' => [
 				'type' => 'DATETIME',
 				'null' => true
+			],
+			'status' => [
+				'type' => 'INT',
+				'constraint' => 1
 			]
 		]);
 		$this->forge->addKey('no_batch', true);

@@ -46,10 +46,13 @@ $routes->get('/wilayah2', 'VaksinController::wil2');
 $routes->get('/wilayah3', 'VaksinController::wil3');
 $routes->get('/wilayah4', 'VaksinController::wil4');
 $routes->get('/input', 'VaksinController::create');
+$routes->get('/inputadmin', 'Login::create');
 $routes->get('/cetak/(:any)', 'VaksinController::cetak/$1');
 $routes->post('/store', 'VaksinController::store');
+$routes->post('/storeadmin', 'Login::store');
 $routes->get('/edit/(:any)', 'VaksinController::edit/$1');
 $routes->post('/update/(:any)/(:any)', 'VaksinController::update/$1/$2');
+$routes->post('/validasi/(:any)', 'VaksinController::validasi/$1');
 $routes->delete('/delete/(:any)/(:any)', 'VaksinController::delete/$1/$2');
 
 /*
