@@ -10,18 +10,14 @@ class SuperAdmin extends Migration
 	public function up()
 	{
 		$this->forge->addField([
-			'id'				=> [
-				'type'           => 'INT',
-				'constraint'     => 11,
-				'auto_increment' => true,
-			],
 			'username'          => [
 				'type'           => 'VARCHAR',
 				'constraint'     => '30',
+				'auto_increment' => true,
 			],
 			'password'       => [
 				'type'           => 'VARCHAR',
-				'constraint'     => '8',
+				'constraint'     => '50',
 			],
 			'nama'       => [
 				'type'           => 'VARCHAR',
