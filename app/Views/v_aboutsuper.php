@@ -92,17 +92,15 @@
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
-    
+
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-800">Super Admin</span>
                                 <i class="fa fa-user-md mr-2 text-gray-800"></i>
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
@@ -140,8 +138,7 @@
                                 </div>
                             </div>
                             <div class="card">
-                                <img src="assets/images/lase.png" class="card-img-top" alt="Anisa Nadila Lase"
-                                onclick="return alert('Aku frontend loh');">
+                                <img src="assets/images/lase.png" class="card-img-top" alt="Anisa Nadila Lase" onclick="return alert('Aku frontend loh');">
                                 <div class="card-body">
                                     <h5 class="card-title" align="center">Frontend</h5>
                                     <hr>
@@ -159,8 +156,7 @@
                                 </div>
                             </div>
                             <div class="card">
-                                <img src="assets/images/aprila.png" class="card-img-top" alt="Aprila Dwi Utami"
-                                onclick="return alert('aku princess');">
+                                <img src="assets/images/aprila.png" class="card-img-top" alt="Aprila Dwi Utami" onclick="return alert('aku princess');">
                                 <div class="card-body">
                                     <h5 class="card-title" align="center">Database</h5>
                                     <hr>
@@ -221,7 +217,7 @@
                 <div class="modal-body">Tekan tombol "Logout" jika anda yakin ingin keluar.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-info" href="/logout">Logout</a>
+                    <a class="btn btn-primary" href="/logout">Logout</a>
                 </div>
             </div>
         </div>
