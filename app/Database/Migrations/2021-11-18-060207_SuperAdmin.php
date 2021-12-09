@@ -13,10 +13,11 @@ class SuperAdmin extends Migration
 			'username'          => [
 				'type'           => 'VARCHAR',
 				'constraint'     => '30',
+				'auto_increment' => true,
 			],
 			'password'       => [
 				'type'           => 'VARCHAR',
-				'constraint'     => '8',
+				'constraint'     => '50',
 			],
 			'nama'       => [
 				'type'           => 'VARCHAR',
