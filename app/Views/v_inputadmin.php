@@ -37,20 +37,20 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="/input">
                     <i class="fas fa-edit"></i>
                     <span>Input Entry</span></a>
             </li>
 
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Entry</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header active">Region:</h6>
+                        <h6 class="collapse-header">Region:</h6>
                         <a class="collapse-item" href="/wilayah1">Region 1</a>
                         <a class="collapse-item" href="/wilayah2">Region 2</a>
                         <a class="collapse-item" href="/wilayah3">Region 3</a>
@@ -123,49 +123,37 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <div id="container">
-                        <h1>Data Vaksin Wilayah 1 <br></br></h1>
-
-                        <div id="body">
-                            <table style="text-align:center" class="table table-striped" width="1200px">
-                                <tr>
-                                    <td scope="col">No.Batch</td>
-                                    <td scope="col">NIK</td>
-                                    <td scope="col">Nama</td>
-                                    <td scope="col">Jenis Kelamin</td>
-                                    <td scope="col">Usia</td>
-                                    <td scope="col">Dosis</td>
-                                    <td scope="col">Jenis Vaksin</td>
-                                    <td scope="col">Action</td>
-                                </tr>
-                                <?php
-                                foreach ($wilayah1 as $row) :
-                                ?>
-                                    <tr>
-                                        <td scope="row"><?= strtoupper($row['no_batch']) ?></td>
-                                        <td scope="row"><?= $row['nik'] ?></td>
-                                        <td scope="row"><?= $row['nama'] ?></td>
-                                        <td scope="row"><?= $row['jenis_kelamin'] ?></td>
-                                        <td scope="row"><?= $row['usia'] ?></td>
-                                        <td scope="row"><?= $row['dosis'] ?></td>
-                                        <td scope="row"><?= $row['jenis_vaksin'] ?></td>
-                                        <td scope="row" style="text-align:center">
-                                            <a href="<?= base_url("edit/" . $row['no_batch']) ?>" class="btn btn-primary" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" role="button">Edit</a>
-                                            <form action="delete/<?= $row['no_batch'] ?>/<?= $row['wilayah'] ?>" method="post" class="d-inline">
-                                                <?= csrf_field(); ?>
-                                                <input type="hidden" name="_method" value="Delete">
-                                                <button type="submit" class="btn btn-danger" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" onclick="return confirm('Apakah anda yakin menghapus Post ini ?'); ">Delete</button>
-                                            </form>
-                                            <?php if ($row['status'] == 2) : ?>
-                                                <a href="<?= base_url("cetak/" . $row['no_batch']) ?>" class="btn btn-warning" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" role="button">Cetak</a>
-                                            <?php else : ?>
-                                                <button class="btn btn-secondary" type="button" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" disabled>Cetak</button>
-                                            <?php endif ?>
-                                        </td>
-                                    </tr>
-                                <?php endforeach; ?>
-                            </table>
-                        </div>
+                    <div id="cont" style="padding: 6px;">
+                        <center>
+                            <h1>Tambah Data Admin</h1>
+                            <div class="card" style="width: 45rem;">
+                                <div class="card-body">
+                                    <table cellpadding="12" cellspacing="5">
+                                        <form action="/storeadmin" method="post">
+                                            <tr>
+                                                <td>Username</td>
+                                                <td class="col-sm-6"><input type="text" style="border:none; outline:none; background:linear-gradient(#d3d3d3, #d3d3d3) center bottom 5px /calc(100% - 10px) 1px no-repeat;" class="form-control" name="username" autocomplete="off" required></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Password</td>
+                                                <td class="col-sm-6"><input type="password" style="border:none; outline:none; background:linear-gradient(#d3d3d3, #d3d3d3) center bottom 5px /calc(100% - 10px) 1px no-repeat;" class="form-control" name="password" autocomplete="off" required></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Nama</td>
+                                                <td class="col-sm-6"><input type="text" style="border:none; outline:none; background:linear-gradient(#d3d3d3, #d3d3d3) center bottom 5px /calc(100% - 10px) 1px no-repeat;" class="form-control" name="nama" autocomplete="off" required></td>
+                                            </tr>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td><input class="btn btn-primary btn-md" style="float:right" type="submit" value="          Save          "></td>
+                                            </tr>
+                                        </form>
+                                    </table>
+                                </div>
+                            </div>
+                        </center>
                     </div>
                 </div>
                 <!-- /.container-fluid -->

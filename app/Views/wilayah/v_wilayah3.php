@@ -156,6 +156,11 @@
                                                 <input type="hidden" name="_method" value="Delete">
                                                 <button type="submit" class="btn btn-danger" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" onclick="return confirm('Apakah anda yakin menghapus Post ini ?'); ">Delete</button>
                                             </form>
+                                            <?php if ($row['status'] == 2) : ?>
+                                                <a href="<?= base_url("cetak/" . $row['no_batch']) ?>" class="btn btn-warning" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" role="button">Cetak</a>
+                                            <?php else : ?>
+                                                <button class="btn btn-secondary" type="button" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" disabled>Cetak</button>
+                                            <?php endif ?>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

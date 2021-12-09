@@ -25,6 +25,7 @@ class VaksinController extends BaseController
 		
 		$VaksinModel = model("VaksinModel");
 		$data = [
+			'title' => "Entry Vaksin",
 			'vaksinasi' => $VaksinModel->findAll()
 		];
 		return view("v_home", $data);
@@ -102,10 +103,6 @@ class VaksinController extends BaseController
 
 	public function store()
 	{
-		if(session()->get('username')==''){
-			session()->setFlashData('gagal', 'Anda Belum Login');
-			return redirect()->to(base_url('login'));
-		}
 		$data = [
 			'no_batch' => $this->request->getVar('no_batch'),
 			'wilayah' => $this->request->getVar('wilayah'),
@@ -116,8 +113,8 @@ class VaksinController extends BaseController
 			'kategori' => $this->request->getVar('kategori'),
 			'dosis' => $this->request->getVar('dosis'),
 			'jenis_vaksin' => $this->request->getVar('jenis_vaksin'),
+			'status' => 1
 		];
-
 
 		$VaksinModel = model("VaksinModel");
 		$VaksinModel->insert($data);
@@ -127,10 +124,6 @@ class VaksinController extends BaseController
 
 	public function delete($no_batch, $wilayah)
 	{
-		if(session()->get('username')==''){
-			session()->setFlashData('gagal', 'Anda Belum Login');
-			return redirect()->to(base_url('login'));
-		}
 		$row = new VaksinModel();
 		$row->where(['no_batch' => $no_batch])->delete();
 		return redirect()->to(base_url('wilayah' . $wilayah));
@@ -153,10 +146,6 @@ class VaksinController extends BaseController
 
 	public function update($no_batch, $wilayah)
 	{
-		if(session()->get('username')==''){
-			session()->setFlashData('gagal', 'Anda Belum Login');
-			return redirect()->to(base_url('login'));
-		}
 		$VaksinModel = model("VaksinModel");
 		$data = $this->request->getPost();
 		$VaksinModel->update($no_batch, $data);
@@ -170,5 +159,16 @@ class VaksinController extends BaseController
 		];
 
 		return view("cetak", $data);
+	}
+
+	public function validasi($no_batch)
+	{
+		$data = [
+			'status' => 2
+		];
+		$where = array('no_batch' => $no_batch);
+
+		$this->VaksinModel->update($where, $data, 'vaksinasi');
+		return redirect()->to(base_url('home'));
 	}
 }
