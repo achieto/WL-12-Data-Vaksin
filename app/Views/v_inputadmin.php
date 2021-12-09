@@ -8,12 +8,12 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-info sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/admin">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-syringe"></i>
+                <div class="sidebar-brand-icon">
+                    <i class="fas fa-user-cog"></i>
                 </div>
                 <div class="sidebar-brand-text mx-3">Data Vaksin Covid-19</div>
             </a>
@@ -23,7 +23,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="/admin">
+                <a class="nav-link" href="/super">
                     <i class="fas fa-home"></i>
                     <span>Home</span></a>
             </li>
@@ -38,25 +38,16 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item active">
-                <a class="nav-link" href="/input">
+                <a class="nav-link" href="/inputadmin">
                     <i class="fas fa-edit"></i>
                     <span>Input Entry</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link" href="/home">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Entry</span>
                 </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Region:</h6>
-                        <a class="collapse-item" href="/wilayah1">Region 1</a>
-                        <a class="collapse-item" href="/wilayah2">Region 2</a>
-                        <a class="collapse-item" href="/wilayah3">Region 3</a>
-                        <a class="collapse-item" href="/wilayah4">Region 4</a>
-                    </div>
-                </div>
             </li>
 
             <!-- Divider -->
@@ -69,7 +60,7 @@
 
             <!-- Nav Item - About -->
             <li class="nav-item">
-                <a class="nav-link" href="/about">
+                <a class="nav-link" href="/aboutsuper">
                     <i class="fas fa-info-circle"></i>
                     <span>About</span></a>
             </li>
@@ -105,7 +96,7 @@
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-800">Admin</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-800">Super Admin</span>
                                 <i class="fa fa-user-md mr-2 text-gray-800"></i>
                             </a>
                             <!-- Dropdown - User Information -->

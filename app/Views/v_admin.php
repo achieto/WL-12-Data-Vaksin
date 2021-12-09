@@ -69,7 +69,7 @@
 
             <!-- Nav Item - About -->
             <li class="nav-item">
-                <a class="nav-link" href="/about">
+                <a class="nav-link" href="/aboutadmin">
                     <i class="fas fa-info-circle"></i>
                     <span>About</span></a>
             </li>

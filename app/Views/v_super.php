@@ -12,8 +12,8 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/admin">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-syringe"></i>
+                <div class="sidebar-brand-icon">
+                    <i class="fas fa-user-cog"></i>
                 </div>
                 <div class="sidebar-brand-text mx-3">Data Vaksin Covid-19</div>
             </a>
@@ -23,7 +23,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="/admin">
+                <a class="nav-link" href="/super">
                     <i class="fas fa-home"></i>
                     <span>Home</span></a>
             </li>
@@ -48,15 +48,6 @@
                     <i class="fas fa-fw fa-table"></i>
                     <span>Entry</span>
                 </a>
-                <!-- <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Region:</h6>
-                        <a class="collapse-item" href="/wilayah1">Region 1</a>
-                        <a class="collapse-item" href="/wilayah2">Region 2</a>
-                        <a class="collapse-item" href="/wilayah3">Region 3</a>
-                        <a class="collapse-item" href="/wilayah4">Region 4</a>
-                    </div>
-                </div> -->
             </li>
 
             <!-- Divider -->
@@ -69,7 +60,7 @@
 
             <!-- Nav Item - About -->
             <li class="nav-item">
-                <a class="nav-link" href="/about">
+                <a class="nav-link" href="/aboutsuper">
                     <i class="fas fa-info-circle"></i>
                     <span>About</span></a>
             </li>
@@ -137,81 +128,7 @@
 
                         <!-- Content Row -->
                         <div class="row">
-
-                            <!-- Earnings (Monthly) Card Example -->
-                            <div class="col-xl-3 col-md-6 mb-4">
-                                <div class="card border-left-danger shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
-                                                    Wilayah 1</div>
-                                                <div class="h5 mb-0 font-weight-bold text-gray-800">3</div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <i class="fas fa-map-marker-alt text-danger" style="font-size:48px"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Earnings (Monthly) Card Example -->
-                            <div class="col-xl-3 col-md-6 mb-4">
-                                <div class="card border-left-success shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                    Wilayah 2</div>
-                                                <div class="h5 mb-0 font-weight-bold text-gray-800">6</div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <i class="fas fa-map-marker-alt text-success" style="font-size:48px"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Earnings (Monthly) Card Example -->
-                            <div class="col-xl-3 col-md-6 mb-4">
-                                <div class="card border-left-info shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                                    Wilayah 3</div>
-                                                <div class="h5 mb-0 font-weight-bold text-gray-800">12</div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <i class="fas fa-map-marker-alt text-info" style="font-size:48px"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <!-- Pending Requests Card Example -->
-                            <div class="col-xl-3 col-md-6 mb-4">
-                                <div class="card border-left-warning shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                    Wilayah 4</div>
-                                                <div class="h5 mb-0 font-weight-bold text-gray-800">19</div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <i class="fas fa-map-marker-alt text-warning" style="font-size:48px"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                            
                         <!-- Content Row -->
                         <div class="col-xl-12 col-lg-12">
                             <div class="card shadow mb-4">
