@@ -134,7 +134,7 @@
                                         <form action="/store" method="post">
                                             <tr>
                                                 <td>No Batch</td>
-                                                <td class="col-sm-6"><input type="text" style="border:none; outline:none; background:linear-gradient(#d3d3d3, #d3d3d3) center bottom 5px /calc(100% - 10px) 1px no-repeat;" class="form-control" name="no_batch" autocomplete="off" required></td>
+                                                <td class="col-sm-6"><input type="text" onchange="ValidateNoBatch()" style="border:none; outline:none; background:linear-gradient(#d3d3d3, #d3d3d3) center bottom 5px /calc(100% - 10px) 1px no-repeat;" class="form-control" id="no_batch" name="no_batch" autocomplete="off" required></td>
                                             </tr>
                                             <tr>
                                                 <td>Wilayah</td>
@@ -175,7 +175,7 @@
                                             </tr>
                                             <tr>
                                                 <td>NIK</td>
-                                                <td><input type="text" class="form-control" style="border:none; outline:none; background:linear-gradient(#d3d3d3, #d3d3d3) center bottom 5px /calc(100% - 10px) 1px no-repeat;" name="nik" autocomplete="off" required></td>
+                                                <td><input type="text" onchange="ValidateNoBatch()" class=" form-control" style="border:none; outline:none; background:linear-gradient(#d3d3d3, #d3d3d3) center bottom 5px /calc(100% - 10px) 1px no-repeat;" name="nik" id="nik" autocomplete="off" required></td>
                                             </tr>
                                             <tr>
                                                 <td>Nama</td>
@@ -268,13 +268,43 @@
                             }
                         }
 
+                        function ValidateNoBatch() {
+                            var no_batch = $("#no_batch").val().length;
+
+                            if (no_batch != 8) {
+                                alert('Mohon masukkan no batch yang valid');
+                                $("#no_batch").addClass("is-invalid");
+                                $("#submit").addClass("disabled");
+                            } else {
+                                $("#no_batch").removeClass("is-invalid");
+                                $("#submit").removeClass("disabled");
+                                return true;
+                            }
+                            return false;
+                        }
+
+                        function ValidateNIK() {
+                            var no_batch = $("#nik").val().length;
+
+                            if (no_batch != 16) {
+                                alert('Mohon masukkan NIK yang valid');
+                                $("#nik").addClass("is-invalid");
+                                $("#submit").addClass("disabled");
+                            } else {
+                                $("#nik").removeClass("is-invalid");
+                                $("#submit").removeClass("disabled");
+                                return true;
+                            }
+                            return false;
+                        }
+
                         function validateUsia(usia) {
                             var re = /^(12[0-6]|1[01][0-9]|[2-9][0-9]|1[2-9])$/;
                             return re.test(usia);
                         }
 
                         function validateUsia2(usia) {
-                            var re = /^(12[0-6]|1[01][0-9]|[2-9][0-9]|2[1-9])$/;
+                            var re = /^(12[0-6]|1[01][0-9]|[3-9][0-9]|2[1-9])$/;
                             return re.test(usia);
                         }
 
@@ -331,6 +361,7 @@
                                     document.getElementById('tenaga_medis').disabled = true;
                                 }
                                 $("#usia").removeClass("is-invalid");
+                                $("#submit").removeClass("disabled");
                                 return true;
                             } else {
                                 if (validateUsia2(usia)) {

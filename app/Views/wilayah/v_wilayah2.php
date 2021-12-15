@@ -185,7 +185,7 @@
                                     <tr>
                                         <td scope="row"><?= strtoupper($row['no_batch']) ?></td>
                                         <td scope="row"><?= $row['nik'] ?></td>
-                                        <td scope="row"><?= $row['nama'] ?></td>
+                                        <td scope="row"><?= ucwords($row['nama']) ?></td>
                                         <td scope="row"><?= $row['jenis_kelamin'] ?></td>
                                         <td scope="row"><?= $row['usia'] ?></td>
                                         <td scope="row"><?= $row['dosis'] ?></td>
