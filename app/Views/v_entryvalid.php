@@ -8,25 +8,18 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/admin">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-syringe"></i>
+                <div class="sidebar-brand-icon">
+                    <i class="fas fa-check-circle"></i>
                 </div>
                 <div class="sidebar-brand-text mx-3">Data Vaksin Covid-19</div>
             </a>
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
-
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
-                <a class="nav-link" href="/admin">
-                    <i class="fas fa-home"></i>
-                    <span>Home</span></a>
-            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -36,46 +29,12 @@
                 Data Vaksin
             </div>
 
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link" href="/input">
-                    <i class="fas fa-edit"></i>
-                    <span>Input Entry</span></a>
-            </li>
-
             <li class="nav-item active">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link" href="/entryvalid">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Entry</span>
                 </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header active">Region:</h6>
-                        <a class="collapse-item" href="/wilayah1">Region 1</a>
-                        <a class="collapse-item" href="/wilayah2">Region 2</a>
-                        <a class="collapse-item" href="/wilayah3">Region 3</a>
-                        <a class="collapse-item" href="/wilayah4">Region 4</a>
-                    </div>
-                </div>
             </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Info
-            </div>
-
-            <!-- Nav Item - About -->
-            <li class="nav-item">
-                <a class="nav-link" href="/aboutadmin">
-                    <i class="fas fa-info-circle"></i>
-                    <span>About</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
@@ -99,54 +58,13 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
-                    <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
-
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
-
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-800">Admin</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-800">Validator</span>
                                 <i class="fa fa-user-md mr-2 text-gray-800"></i>
                             </a>
                             <!-- Dropdown - User Information -->
@@ -165,7 +83,7 @@
                 <div class="container-fluid">
 
                     <div id="container">
-                        <h1>Data Vaksin Wilayah 1 <br></br></h1>
+                        <h1>Data Vaksin<br></br></h1>
 
                         <div id="body">
                             <table style="text-align:center" class="table table-striped" width="1200px">
@@ -180,27 +98,22 @@
                                     <td scope="col">Action</td>
                                 </tr>
                                 <?php
-                                foreach ($wilayah1 as $row) :
+                                foreach ($vaksinasi as $row) :
                                 ?>
                                     <tr>
                                         <td scope="row"><?= strtoupper($row['no_batch']) ?></td>
                                         <td scope="row"><?= $row['nik'] ?></td>
-                                        <td scope="row"><?= ucwords($row['nama']) ?></td>
+                                        <td scope="row"><?= $row['nama'] ?></td>
                                         <td scope="row"><?= $row['jenis_kelamin'] ?></td>
                                         <td scope="row"><?= $row['usia'] ?></td>
                                         <td scope="row"><?= $row['dosis'] ?></td>
                                         <td scope="row"><?= $row['jenis_vaksin'] ?></td>
                                         <td scope="row" style="text-align:center">
-                                            <a href="<?= base_url("edit/" . $row['no_batch']) ?>" class="btn btn-primary" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" role="button">Edit</a>
-                                            <form action="delete/<?= $row['no_batch'] ?>/<?= $row['wilayah'] ?>" method="post" class="d-inline">
-                                                <?= csrf_field(); ?>
-                                                <input type="hidden" name="_method" value="Delete">
-                                                <button type="submit" class="btn btn-danger" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" onclick="return confirm('Apakah anda yakin menghapus Post ini ?'); ">Delete</button>
-                                            </form>
-                                            <?php if ($row['status'] == 2) : ?>
-                                                <a href="<?= base_url("cetak/" . $row['no_batch']) ?>" class="btn btn-warning" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" role="button">Cetak</a>
-                                            <?php else : ?>
-                                                <button class="btn btn-secondary" type="button" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" disabled>Cetak</button>
+                                            <?php if ($row['status'] != 2) : ?>
+                                                <form action="validasivalid/<?= $row['no_batch'] ?>" method="post" class="d-inline">
+                                                    <button type="submit" class="btn btn-success" style="font: 13px/20px normal Helvetica, Arial, sans-serif;">Validasi</button>
+                                                </form> <?php else : ?>
+                                                <button class="btn btn-secondary" type="button" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" disabled>Validasi</button>
                                             <?php endif ?>
                                         </td>
                                     </tr>
@@ -250,10 +163,10 @@
                 <div class="modal-body">Tekan tombol "Logout" jika anda yakin ingin keluar.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="/logout">Logout</a>
+                    <a class="btn btn-success" href="/logout">Logout</a>
                 </div>
             </div>
         </div>
     </div>
 
-<?php $this->endSection(); ?>
+    <?php $this->endSection(); ?>

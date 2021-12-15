@@ -33,26 +33,25 @@ class Login extends BaseController
 				];
 				session()->set($login);
 				return redirect()->to(base_url('admin'));
-	
-		} else if ($ceksuper != null) {
+		} 
+		else if ($ceksuper != null) {
 			$login = [
 				'username' => $username
 			];
 			session()->set($login);
 			return redirect()->to(base_url('super'));
-		}
+		} 
 		else if($cekvalidator != null) {
 			$login = [
 				'username' => $username
 			];
 			session()->set($login);
-			return redirect()->to(base_url('super'));
+			return redirect()->to(base_url('entryvalid'));
 		}
 		else {
 			session()->setFlashdata('gagal', 'Username/Password salah');
 			return redirect()->to(base_url('/'));
 		}
-
 	}
 
 	public function logout()

@@ -44,7 +44,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="/home">
+                <a class="nav-link" href="/entrysuper">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Entry</span>
                 </a>
@@ -147,7 +147,7 @@
                                                 <td></td>
                                                 <td></td>
                                                 <td></td>
-                                                <td><input class="btn btn-primary btn-md" style="float:right" type="submit" value="          Save          "></td>
+                                                <td><input class="btn btn-info btn-md" style="float:right" type="submit" value="          Save          "></td>
                                             </tr>
                                         </form>
                                     </table>
@@ -237,7 +237,7 @@
                 <div class="modal-body">Tekan tombol "Logout" jika anda yakin ingin keluar.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="/logout">Logout</a>
+                    <a class="btn btn-info" href="/logout">Logout</a>
                 </div>
             </div>
         </div>
