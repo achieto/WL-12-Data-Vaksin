@@ -95,93 +95,101 @@
                 <div class="container-fluid">
 
                     <div id="cont" style="padding: 6px;">
+                    <center>
                         <h1>Edit Data Vaksin</h1>
-
-                        <div id="by" style="padding: 6px;">
-                            <table cellpadding="5" cellspacing="5">
-                                <form action="/update/<?= $row['no_batch'] ?>/<?= $row['wilayah'] ?>" method="post">
-                                    <tr>
-                                        <td>No Batch</td>
-                                        <td><input type="text" value="<?php echo strtoupper($row['no_batch']) ?>" disabled></td>
-                                        <td><input type="hidden" name="no_batch" value="<?php echo $row['no_batch'] ?>"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>NIK</td>
-                                        <td><input type="text" name="nik" autocomplete="off" required value="<?php echo $row['nik'] ?>"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Nama</td>
-                                        <td><input type="text" name="nama" autocomplete="off" required value="<?php echo $row['nama'] ?>"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Jenis Kelamin</td>
-                                        <td><input type="radio" name="jenis_kelamin" id="ll" value="Laki-Laki" required>
-                                            <label for=" ll">Laki-Laki</label>
-                                        </td>
-                                        <td><input type="radio" name="jenis_kelamin" id="p" value="Perempuan" required>
-                                            <label for=" p">Perempuan</label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Usia</td>
-                                        <td><input type="text" name="usia" autocomplete="off" required value=" <?php echo $row['usia'] ?>"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Kategori</td>
-                                        <td>
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <label class="input-group-text" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" for="kategori">Kategori</label>
-                                                </div>
-                                                <select class="custom-select" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" name="kategori" id="kategori" required>
-                                                    <option selected="true" disabled="disabled">Pilih...</option>
-                                                    <option value="Tenaga Medis">Tenaga Medis</option>
-                                                    <option value="Non-Tenaga Medis">Non-Tenaga Medis</option>
-                                                </select>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Vaksin</td>
-                                        <td>
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <label class="input-group-text" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" for="dosis">Dosis</label>
-                                                </div>
-                                                <select class="custom-select" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" name="dosis" id="dosis" required>
-                                                    <option selected="true" disabled="disabled">Pilih...</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                </select>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="input-group mr-5">
-                                                <div class="input-group-prepend">
-                                                    <label class="input-group-text" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" for="jenis_vaksin">Jenis Vaksin</label>
-                                                </div>
-                                                <select class="custom-select" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" name="jenis_vaksin" id="jenis_vaksin" required>
-                                                    <option selected="true" disabled="disabled">Pilih...</option>
-                                                    <option value="Sinovac">Sinovac</option>
-                                                    <option value="AstraZeneca">AstraZeneca</option>
-                                                    <option value="Sinopharm">Sinopharm</option>
-                                                    <option value="Moderna">Moderna</option>
-                                                    <option value="Novavax">Novavax</option>
-                                                    <option value="Sputnik-V">Sputnik-V</option>
-                                                    <option value="Janssen">Janssen</option>
-                                                    <option value="Convidencia">Convidencia</option>
-                                                    <option value="Zifivax">Zifivax</option>
-                                                </select>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><input class=" btn btn-secondary" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" type="submit" value="Save"></td>
-                                    </tr>
-                                </form>
-                            </table>
-                        </div>
+                            <div class="card" style="width: 45rem; border-radius: 20px">
+                                <div class="card-body">
+                                    <table cellpadding="12" cellspacing="5">
+                                        <form action="/update/<?= $row['no_batch'] ?>/<?= $row['wilayah'] ?>" method="post">
+                                            <tr>
+                                                <td>No Batch</td>
+                                                <td><input type="text" style="border:none; outline:none; background:linear-gradient(#d3d3d3, #d3d3d3) center bottom 5px /calc(100% - 10px) 1px no-repeat;" class="form-control" value="<?php echo strtoupper($row['no_batch']) ?>" disabled></td>
+                                                <td><input type="hidden" style="border:none; outline:none; background:linear-gradient(#d3d3d3, #d3d3d3) center bottom 5px /calc(100% - 10px) 1px no-repeat;" class="form-control" name="no_batch" value="<?php echo $row['no_batch'] ?>"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>NIK</td>
+                                                <td><input type="text" class="form-control" style="border:none; outline:none; background:linear-gradient(#d3d3d3, #d3d3d3) center bottom 5px /calc(100% - 10px) 1px no-repeat;" name="nik" autocomplete="off" required value="<?php echo $row['nik'] ?>"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Nama</td>
+                                                <td><input type="text" class="form-control" style="border:none; outline:none; background:linear-gradient(#d3d3d3, #d3d3d3) center bottom 5px /calc(100% - 10px) 1px no-repeat;" name="nama" autocomplete="off" required value="<?php echo $row['nama'] ?>"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jenis Kelamin</td>
+                                                <td><input type="radio" name="jenis_kelamin" id="ll" value="Laki-Laki" required>
+                                                    <label for=" ll" style="margin-right: 15px">Laki-Laki</label>
+                                                    <input type="radio" name="jenis_kelamin" id="p" value="Perempuan" required>
+                                                    <label for=" p">Perempuan</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Usia</td>
+                                                <td><input type="text" class="form-control" style="border:none; outline:none; background:linear-gradient(#d3d3d3, #d3d3d3) center bottom 5px /calc(100% - 10px) 1px no-repeat;" name="usia" autocomplete="off" required value=" <?php echo $row['usia'] ?>"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Kategori</td>
+                                                <td>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <label class="input-group-text" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" for="kategori">Kategori</label>
+                                                        </div>
+                                                        <select class="custom-select" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" name="kategori" id="kategori" required>
+                                                            <option selected="true" disabled="disabled">Pilih...</option>
+                                                            <option value="Tenaga Medis">Tenaga Medis</option>
+                                                            <option value="Non-Tenaga Medis">Non-Tenaga Medis</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Vaksin</td>
+                                                <td>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <label class="input-group-text" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" for="dosis">Dosis</label>
+                                                        </div>
+                                                        <select class="custom-select" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" name="dosis" id="dosis" required>
+                                                            <option selected="true" disabled="disabled">Pilih...</option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>
+                                                    <div class="input-group mr-5">
+                                                        <div class="input-group-prepend">
+                                                            <label class="input-group-text" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" for="jenis_vaksin">Jenis Vaksin</label>
+                                                        </div>
+                                                        <select class="custom-select" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" name="jenis_vaksin" id="jenis_vaksin" required>
+                                                            <option selected="true" disabled="disabled">Pilih...</option>
+                                                            <option value="Sinovac">Sinovac</option>
+                                                            <option value="AstraZeneca">AstraZeneca</option>
+                                                            <option value="Sinopharm">Sinopharm</option>
+                                                            <option value="Moderna">Moderna</option>
+                                                            <option value="Novavax">Novavax</option>
+                                                            <option value="Sputnik-V">Sputnik-V</option>
+                                                            <option value="Janssen">Janssen</option>
+                                                            <option value="Convidencia">Convidencia</option>
+                                                            <option value="Zifivax">Zifivax</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td><input class="btn btn-primary btn-md" style="float:right" type="submit" value="          Save          "></td>
+                                            </tr>
+                                        </form>
+                                    </table>
+                                </div>
+                            </div>
+                    </center>
                     </div>
                 </div>
                 <!-- /.container-fluid -->

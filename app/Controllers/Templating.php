@@ -48,7 +48,7 @@ class Templating extends BaseController
         echo view('v_login');
 	}
 
-	public function about()
+	public function aboutadmin()
 	{
 		if (session()->get('username') == '') {
 			session()->setFlashdata('gagal', 'Anda belum login');
@@ -58,7 +58,7 @@ class Templating extends BaseController
 		$data = [
 			'title' => "About",
 		];
-        return view('v_about', $data);
+        return view('v_aboutadmin', $data);
 	}
 
 	public function aboutsuper()
@@ -71,6 +71,6 @@ class Templating extends BaseController
 		$data = [
 			'title' => "About",
 		];
-		return view('v_aboutsuper', $data);
+        return view('v_aboutsuper', $data);
 	}
 }

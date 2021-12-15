@@ -3,6 +3,15 @@
 <head>
 
     <title>Cetak Hasil Vaksinasi</title>
+    <style>
+        .garis_tepi1 {
+            width:750px;
+            height: 500px;
+            border: 20px groove #5885AF;
+            border-radius: 20px;
+            margin: 0 auto;
+        }
+    </style>
 
 </head>
 
@@ -44,57 +53,62 @@
         </table> -->
     </div>
     <hr>
+    <div class="garis_tepi1">
+        <center> 
+            <div>
+                <h1><u>KARTU VAKSINASI COVID-19</u></h1>
+            </div>
 
-    <div align="center">
-        <h1><u>KARTU VAKSINASI COVID-19</u></h1>
+
+            <div>
+                <table width="60%">
+
+                    <tr>
+                        <td>No. Batch</td>
+                        <td><?php echo ":  " . $row['no_batch']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>NIK</td>
+                        <td><?php echo ":  " . $row['nik']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Nama</td>
+                        <td><?php echo ":  " . $row['nama']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Jenis Kelamin</td>
+                        <td><?php echo ":  " . $row['jenis_kelamin']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Usia</td>
+                        <td><?php echo ":  " . $row['usia']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Dosis</td>
+                        <td><?php echo ":  " . $row['dosis']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Jenis Vaksin</td>
+                        <td><?php echo ":  " . $row['jenis_vaksin']; ?></td>
+                    </tr>
+                </table>
+            </div>
+        </center>
+        <br><br>
+        <br> <br> <br><br>
+        <div style="padding: 15px">
+            <right>
+                <b><u>Penanggung Jawab</b>
+                <br><br>
+                dr. Aprila Dwi Utami</u>
+                <p>NIP. 1917051012</p>
+            </right>
+        </div>
     </div>
-
-
-    <div align="center">
-        <table width="60%">
-
-            <tr>
-                <td>No. Batch</td>
-                <td><?php echo ":  " . $row['no_batch']; ?></td>
-            </tr>
-            <tr>
-                <td>NIK</td>
-                <td><?php echo ":  " . $row['nik']; ?></td>
-            </tr>
-            <tr>
-                <td>Nama</td>
-                <td><?php echo ":  " . $row['nama']; ?></td>
-            </tr>
-            <tr>
-                <td>Jenis Kelamin</td>
-                <td><?php echo ":  " . $row['jenis_kelamin']; ?></td>
-            </tr>
-            <tr>
-                <td>Usia</td>
-                <td><?php echo ":  " . $row['usia']; ?></td>
-            </tr>
-            <tr>
-                <td>Dosis</td>
-                <td><?php echo ":  " . $row['dosis']; ?></td>
-            </tr>
-            <tr>
-                <td>Jenis Vaksin</td>
-                <td><?php echo ":  " . $row['jenis_vaksin']; ?></td>
-            </tr>
-        </table>
-    </div>
-    <br><br>
 
     <script>
         window.print();
     </script>
-    <br> <br> <br><br>
-    <right>
-        <b><u>Penanggung Jawab</b>
-        <br><br>
-        dr. Aprila Dwi Utami</u>
-        <p>NIP. 1917051012</p>
-    </right>
 </body>
 
 </html>
