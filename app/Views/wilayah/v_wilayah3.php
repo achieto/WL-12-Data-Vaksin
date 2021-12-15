@@ -139,7 +139,7 @@
                                 </form>
                             </div>
                         </li>
-                        
+
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
@@ -256,4 +256,4 @@
         </div>
     </div>
 
-    <?php $this->endSection(); ?>
+<?php $this->endSection(); ?>
