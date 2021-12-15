@@ -124,8 +124,6 @@
                 <div class="container-fluid">
 
                     <div id="cont" style="padding: 6px;">
-                    <center>
-                        <h1>Tambah Data Vaksin</h1>
                         <center>
                             <h1>Tambah Data Vaksin</h1>
                             <div class="card" style="width: 45rem; border-radius: 20px">
