@@ -126,7 +126,7 @@
                     <div id="cont" style="padding: 6px;">
                     <center>
                         <h1>Tambah Data Vaksin</h1>
-                            <div class="card" style="width: 45rem;">
+                            <div class="card" style="width: 45rem; border-radius: 20px">
                                 <div class="card-body">
                                     <table cellpadding="12" cellspacing="5">
                                         <form action="/store" method="post">

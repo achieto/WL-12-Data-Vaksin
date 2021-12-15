@@ -2,6 +2,7 @@
 namespace App\Controllers;
 use App\Models\AdminModel;
 use App\Models\SuperModel;
+use App\Models\ValidatorModel;
 class Login extends BaseController
 {
 	public function index()
@@ -17,12 +18,14 @@ class Login extends BaseController
 	{
 		$admin = new AdminModel();
 		$super = new SuperModel();
+		$validator = new ValidatorModel();
 		// $table = 'admin';
 		$username = $this->request->getPost('username');
 		$password = $this->request->getPost('password');
 
 		$cek = $admin->get_data($username, $password);
 		$ceksuper = $super->get_data($username, $password);
+		$cekvalidator = $validator->get_data($username, $password);
 		if ($cek != null) {
 			
 				$login = [
@@ -32,6 +35,13 @@ class Login extends BaseController
 				return redirect()->to(base_url('admin'));
 	
 		} else if ($ceksuper != null) {
+			$login = [
+				'username' => $username
+			];
+			session()->set($login);
+			return redirect()->to(base_url('super'));
+		}
+		else if($cekvalidator != null) {
 			$login = [
 				'username' => $username
 			];
@@ -59,7 +69,7 @@ class Login extends BaseController
 		}
 
 		$data = [
-			'title' => "Input Entry",
+			'title' => "Input Admin",
 		];
 		return view('v_inputadmin', $data);
 	}
