@@ -16,7 +16,7 @@ class VaksinController extends BaseController
 		$this->VaksinModel = new VaksinModel();
 	}
 
-	public function index()
+	public function entry_super()
 	{
 		if (session()->get('username') == '') {
 			session()->setFlashdata('gagal', 'Anda belum login');
@@ -28,7 +28,22 @@ class VaksinController extends BaseController
 			'title' => "Entry Vaksin",
 			'vaksinasi' => $VaksinModel->findAll()
 		];
-		return view("v_home", $data);
+		return view("v_entrysuper", $data);
+	}
+
+	public function entry_valid()
+	{
+		if (session()->get('username') == '') {
+			session()->setFlashdata('gagal', 'Anda belum login');
+			return redirect()->to(base_url('/'));
+		}
+		
+		$VaksinModel = model("VaksinModel");
+		$data = [
+			'title' => "Entry Vaksin",
+			'vaksinasi' => $VaksinModel->findAll()
+		];
+		return view("v_entryvalid", $data);
 	}
 
 	public function wil1()
@@ -161,7 +176,7 @@ class VaksinController extends BaseController
 		return view("cetak", $data);
 	}
 
-	public function validasi($no_batch)
+	public function validasi_super($no_batch)
 	{
 		$data = [
 			'status' => 2
@@ -169,6 +184,17 @@ class VaksinController extends BaseController
 		$where = array('no_batch' => $no_batch);
 
 		$this->VaksinModel->update($where, $data, 'vaksinasi');
-		return redirect()->to(base_url('home'));
+		return redirect()->to(base_url('entrysuper'));
+	}
+
+	public function validasi_valid($no_batch)
+	{
+		$data = [
+			'status' => 2
+		];
+		$where = array('no_batch' => $no_batch);
+
+		$this->VaksinModel->update($where, $data, 'vaksinasi');
+		return redirect()->to(base_url('entryvalid'));
 	}
 }

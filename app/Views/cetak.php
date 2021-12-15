@@ -18,13 +18,13 @@
 <body>
 
     <div align="center">
-        <!-- <table>
+        <table>
             <tr>
 
                 <td>
                     <div align="center">
                         <font size="5"><b>
-                                Laboratorium RS EDELWEIS</b></font>
+                            Prianly Vacinate Covid-19</b></font>
                     </div>
                 </td>
             </tr>
@@ -32,27 +32,28 @@
                 <td>
                     <div align="center">
                         <font size="4"><b>
-                                Jalan Raya Ryacudu No.12, Bandar Lampung</b></font>
+                            Jl. Prof. Dr. Ir. Sumantri Brojonegoro No.1, Gedong Meneng</b></font>
                     </div>
                 </td>
             </tr>
             <tr>
                 <td>
                     <div align="center">
-                        No. Izin : 1234/DINKES-LPG/VI/2021
+                        No. Izin : 3612/DINAS-COVID/XII/2021
                     </div>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <div>
-                        No telp. (0700)8897765 | email : rsedelweis@gmail.com
+                    <div align="center">
+                        No telp. (0721) 267 128 | email : prianly3612@gmail.com
                     </div>
                 </td>
             </tr>
-        </table> -->
+        </table>
     </div>
     <hr>
+    <br><br>
     <div class="garis_tepi1">
         <center> 
             <div>
@@ -99,9 +100,9 @@
         <div style="padding: 15px">
             <right>
                 <b><u>Penanggung Jawab</b>
-                <br><br>
+                <br><br><br><br><br>
                 dr. Aprila Dwi Utami</u>
-                <p>NIP. 1917051012</p>
+                <br>NIP. 1917051012
             </right>
         </div>
     </div>

@@ -37,9 +37,11 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Templating::login');
 $routes->get('/admin', 'Templating::admin');
 $routes->get('/super', 'Templating::super');
+$routes->get('/validator', 'Templating::validator');
 $routes->get('/aboutadmin', 'Templating::aboutadmin');
 $routes->get('/aboutsuper', 'Templating::aboutsuper');
-$routes->get('/home', 'VaksinController::index');
+$routes->get('/entrysuper', 'VaksinController::entry_super');
+$routes->get('/entryvalid', 'VaksinController::entry_valid');
 $routes->post('/login_action', 'Login::login_action');
 $routes->get('/logout', 'Login::logout');
 $routes->get('/wilayah1', 'VaksinController::wil1');
@@ -53,7 +55,8 @@ $routes->post('/store', 'VaksinController::store');
 $routes->post('/storeadmin', 'Login::store');
 $routes->get('/edit/(:any)', 'VaksinController::edit/$1');
 $routes->post('/update/(:any)/(:any)', 'VaksinController::update/$1/$2');
-$routes->post('/validasi/(:any)', 'VaksinController::validasi/$1');
+$routes->post('/validasisuper/(:any)', 'VaksinController::validasi_super/$1');
+$routes->post('/validasivalid/(:any)', 'VaksinController::validasi_valid/$1');
 $routes->delete('/delete/(:any)/(:any)', 'VaksinController::delete/$1/$2');
 
 /*

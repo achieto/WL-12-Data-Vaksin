@@ -35,6 +35,19 @@ class Templating extends BaseController
 		return view('v_super', $data);
 	}
 
+	public function validator()
+	{
+		if (session()->get('username') == '') {
+			session()->setFlashdata('gagal', 'Anda belum login');
+			return redirect()->to(base_url('/'));
+		}
+
+		$data = [
+			'title' => "Home",
+		];
+		return view('v_entryvalid', $data);
+	}
+
     public function login()
 	{
 		if (!session()->get('username') == '') {

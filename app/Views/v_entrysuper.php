@@ -44,7 +44,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="/home">
+                <a class="nav-link" href="/entrysuper">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Entry</span>
                 </a>
@@ -142,7 +142,7 @@
                                         <td scope="row"><?= $row['jenis_vaksin'] ?></td>
                                         <td scope="row" style="text-align:center">
                                             <?php if ($row['status'] != 2) : ?>
-                                                <form action="validasi/<?= $row['no_batch'] ?>" method="post" class="d-inline">
+                                                <form action="validasisuper/<?= $row['no_batch'] ?>" method="post" class="d-inline">
                                                     <button type="submit" class="btn btn-success" style="font: 13px/20px normal Helvetica, Arial, sans-serif;">Validasi</button>
                                                 </form> <?php else : ?>
                                                 <button class="btn btn-secondary" type="button" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" disabled>Validasi</button>
@@ -195,7 +195,7 @@
                 <div class="modal-body">Tekan tombol "Logout" jika anda yakin ingin keluar.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="/logout">Logout</a>
+                    <a class="btn btn-info" href="/logout">Logout</a>
                 </div>
             </div>
         </div>
