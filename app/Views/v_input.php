@@ -124,9 +124,9 @@
                 <div class="container-fluid">
 
                     <div id="cont" style="padding: 6px;">
-                    <center>
-                        <h1>Tambah Data Vaksin</h1>
-                            <div class="card" style="width: 45rem;">
+                        <center>
+                            <h1>Tambah Data Vaksin</h1>
+                            <div class="card" style="width: 45rem; border-radius: 20px">
                                 <div class="card-body">
                                     <table cellpadding="12" cellspacing="5">
                                         <form action="/store" method="post">
@@ -142,7 +142,7 @@
                                                             <label class="input-group-text" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" for="wilayah">Wilayah</label>
                                                         </div>
                                                         <select class="form-control" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" name="wilayah" id="wilayah" required>
-                                                            <option selected="true" disabled="disabled">Pilih...</option>
+                                                            <option selected="true" value="" disabled selected>Pilih...</option>
                                                             <optgroup label="Wilayah 1">
                                                                 <option value="1">Sumatera</option>
                                                                 <option value="1">Jakarta</option>
@@ -190,7 +190,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Usia</td>
-                                                <td><input type="text" class="form-control" style="border:none; outline:none; background:linear-gradient(#d3d3d3, #d3d3d3) center bottom 5px /calc(100% - 10px) 1px no-repeat;" name="usia" autocomplete="off" required></td>
+                                                <td><input type="text" class="form-control" onchange="validate()" style="border:none; outline:none; background:linear-gradient(#d3d3d3, #d3d3d3) center bottom 5px /calc(100% - 10px) 1px no-repeat;" name="usia" id="usia" autocomplete="off" required></td>
                                             </tr>
                                             <tr>
                                                 <td>Kategori</td>
@@ -200,8 +200,8 @@
                                                             <label class="input-group-text" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" for="kategori">Kategori</label>
                                                         </div>
                                                         <select class="custom-select" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" name="kategori" id="kategori" required>
-                                                            <option selected="true" disabled="disabled">Pilih...</option>
-                                                            <option value="Tenaga Medis">Tenaga Medis</option>
+                                                            <option selected="true" value="" disabled selected>Pilih...</option>
+                                                            <option value="Tenaga Medis" id="tenaga_medis">Tenaga Medis</option>
                                                             <option value="Non-Tenaga Medis">Non-Tenaga Medis</option>
                                                         </select>
                                                     </div>
@@ -215,7 +215,7 @@
                                                             <label class="input-group-text" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" for="dosis">Dosis</label>
                                                         </div>
                                                         <select class="custom-select" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" name="dosis" id="dosis" required>
-                                                            <option selected="true" disabled="disabled">Pilih...</option>
+                                                            <option selected="true" value="" disabled selected>Pilih...</option>
                                                             <option value="1">1</option>
                                                             <option value="2">2</option>
                                                             <option value="3" id="3">3</option>
@@ -231,16 +231,16 @@
                                                             <label class="input-group-text" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" for="jenis_vaksin">Jenis Vaksin</label>
                                                         </div>
                                                         <select class="custom-select" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" name="jenis_vaksin" id="jenis_vaksin" required>
-                                                            <option selected="true" disabled="disabled">Pilih...</option>
-                                                            <option value="Sinovac">Sinovac</option>
-                                                            <option value="AstraZeneca">AstraZeneca</option>
-                                                            <option value="Sinopharm">Sinopharm</option>
-                                                            <option value="Moderna">Moderna</option>
-                                                            <option value="Novavax">Novavax</option>
-                                                            <option value="Sputnik-V">Sputnik-V</option>
-                                                            <option value="Janssen">Janssen</option>
-                                                            <option value="Convidencia">Convidencia</option>
-                                                            <option value="Zifivax">Zifivax</option>
+                                                            <option selected="true" value="" disabled selected>Pilih...</option>
+                                                            <option value="Sinovac" id="sinovac">Sinovac</option>
+                                                            <option value="AstraZeneca" id="astrazeneca">AstraZeneca</option>
+                                                            <option value="Sinopharm" id="sinopharm">Sinopharm</option>
+                                                            <option value="Moderna" id="moderna">Moderna</option>
+                                                            <option value="Novavax" id="novavax">Novavax</option>
+                                                            <option value="Sputnik-V" id="sputnikv">Sputnik-V</option>
+                                                            <option value="Janssen" id="janssen">Janssen</option>
+                                                            <option value="Convidencia" id="convidencia">Convidencia</option>
+                                                            <option value="Zifivax" id="zifivax">Zifivax</option>
                                                         </select>
                                                     </div>
                                                 </td>
@@ -249,13 +249,13 @@
                                                 <td></td>
                                                 <td></td>
                                                 <td></td>
-                                                <td><input class="btn btn-primary btn-md" style="float:right" type="submit" value="          Save          "></td>
+                                                <td><input class="btn btn-primary btn-md" style="float:right" type="submit" id="submit" name="submit" value="          Save          "></td>
                                             </tr>
                                         </form>
                                     </table>
                                 </div>
                             </div>
-                    </center>
+                        </center>
                     </div>
                     <script>
                         document.getElementById('kategori').onchange = function() {
@@ -264,6 +264,122 @@
                             } else {
                                 document.getElementById('3').disabled = false;
                             }
+                        }
+
+                        function validateUsia(usia) {
+                            var re = /^(12[0-6]|1[01][0-9]|[2-9][0-9]|1[2-9])$/;
+                            return re.test(usia);
+                        }
+
+                        function validateUsia2(usia) {
+                            var re = /^(12[0-6]|1[01][0-9]|[2-9][0-9]|2[1-9])$/;
+                            return re.test(usia);
+                        }
+
+                        function validateUsia3(usia) {
+                            var re = /^(1[2-7])$/;
+                            return re.test(usia);
+                        }
+
+                        function validate() {
+                            var usia = $("#usia").val();
+
+                            if (validateUsia(usia)) {
+                                if (validateUsia2(usia)) {
+                                    document.getElementById('tenaga_medis').disabled = false;
+                                    if (validateUsia3(usia)) {
+                                        document.getElementById('astrazeneca').disabled = true;
+                                        document.getElementById('sinopharm').disabled = true;
+                                        document.getElementById('moderna').disabled = true;
+                                        document.getElementById('novavax').disabled = true;
+                                        document.getElementById('sputnikv').disabled = true;
+                                        document.getElementById('janssen').disabled = true;
+                                        document.getElementById('convidencia').disabled = true;
+                                        document.getElementById('zifivax').disabled = true;
+                                    } else {
+                                        document.getElementById('astrazeneca').disabled = false;
+                                        document.getElementById('sinopharm').disabled = false;
+                                        document.getElementById('moderna').disabled = false;
+                                        document.getElementById('novavax').disabled = false;
+                                        document.getElementById('sputnikv').disabled = false;
+                                        document.getElementById('janssen').disabled = false;
+                                        document.getElementById('convidencia').disabled = false;
+                                        document.getElementById('zifivax').disabled = false;
+                                    }
+                                } else {
+                                    if (validateUsia3(usia)) {
+                                        document.getElementById('astrazeneca').disabled = true;
+                                        document.getElementById('sinopharm').disabled = true;
+                                        document.getElementById('moderna').disabled = true;
+                                        document.getElementById('novavax').disabled = true;
+                                        document.getElementById('sputnikv').disabled = true;
+                                        document.getElementById('janssen').disabled = true;
+                                        document.getElementById('convidencia').disabled = true;
+                                        document.getElementById('zifivax').disabled = true;
+                                    } else {
+                                        document.getElementById('astrazeneca').disabled = false;
+                                        document.getElementById('sinopharm').disabled = false;
+                                        document.getElementById('moderna').disabled = false;
+                                        document.getElementById('novavax').disabled = false;
+                                        document.getElementById('sputnikv').disabled = false;
+                                        document.getElementById('janssen').disabled = false;
+                                        document.getElementById('convidencia').disabled = false;
+                                        document.getElementById('zifivax').disabled = false;
+                                    }
+                                    document.getElementById('tenaga_medis').disabled = true;
+                                }
+                                $("#usia").removeClass("is-invalid");
+                                return true;
+                            } else {
+                                if (validateUsia2(usia)) {
+                                    if (validateUsia3(usia)) {
+                                        document.getElementById('astrazeneca').disabled = true;
+                                        document.getElementById('sinopharm').disabled = true;
+                                        document.getElementById('moderna').disabled = true;
+                                        document.getElementById('novavax').disabled = true;
+                                        document.getElementById('sputnikv').disabled = true;
+                                        document.getElementById('janssen').disabled = true;
+                                        document.getElementById('convidencia').disabled = true;
+                                        document.getElementById('zifivax').disabled = true;
+                                    } else {
+                                        document.getElementById('astrazeneca').disabled = false;
+                                        document.getElementById('sinopharm').disabled = false;
+                                        document.getElementById('moderna').disabled = false;
+                                        document.getElementById('novavax').disabled = false;
+                                        document.getElementById('sputnikv').disabled = false;
+                                        document.getElementById('janssen').disabled = false;
+                                        document.getElementById('convidencia').disabled = false;
+                                        document.getElementById('zifivax').disabled = false;
+                                    }
+                                    document.getElementById('tenaga_medis').disabled = false;
+                                } else {
+                                    if (validateUsia3(usia)) {
+                                        document.getElementById('astrazeneca').disabled = true;
+                                        document.getElementById('sinopharm').disabled = true;
+                                        document.getElementById('moderna').disabled = true;
+                                        document.getElementById('novavax').disabled = true;
+                                        document.getElementById('sputnikv').disabled = true;
+                                        document.getElementById('janssen').disabled = true;
+                                        document.getElementById('convidencia').disabled = true;
+                                        document.getElementById('zifivax').disabled = true;
+                                    } else {
+                                        document.getElementById('astrazeneca').disabled = false;
+                                        document.getElementById('sinopharm').disabled = false;
+                                        document.getElementById('moderna').disabled = false;
+                                        document.getElementById('novavax').disabled = false;
+                                        document.getElementById('sputnikv').disabled = false;
+                                        document.getElementById('janssen').disabled = false;
+                                        document.getElementById('convidencia').disabled = false;
+                                        document.getElementById('zifivax').disabled = false;
+                                    }
+                                    document.getElementById('tenaga_medis').disabled = true;
+                                }
+                                alert('Mohon masukkan usia yang valid');
+                                $("#usia").addClass("is-invalid");
+                                $("#submit").addClass("disabled");
+                            }
+
+                            return false;
                         }
                     </script>
                 </div>

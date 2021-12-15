@@ -60,4 +60,17 @@ class Templating extends BaseController
 		];
         return view('v_about', $data);
 	}
+
+	public function aboutsuper()
+	{
+		if (session()->get('username') == '') {
+			session()->setFlashdata('gagal', 'Anda belum login');
+			return redirect()->to(base_url('/'));
+		}
+
+		$data = [
+			'title' => "About",
+		];
+		return view('v_aboutsuper', $data);
+	}
 }
