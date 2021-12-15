@@ -59,7 +59,7 @@ class Login extends BaseController
 		}
 
 		$data = [
-			'title' => "Input Entry",
+			'title' => "Input Admin",
 		];
 		return view('v_inputadmin', $data);
 	}
