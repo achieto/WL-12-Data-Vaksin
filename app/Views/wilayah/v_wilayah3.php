@@ -212,9 +212,6 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <div style="font-size: 15px">
-                            <?= $pager->links('wilayah3', 'wilpagination'); ?>
-                        </div>
                         <span>Developed by Prianly</span>
                         <br>
                         <span>Copyright &copy; Our Website 2021</span>
@@ -227,6 +224,12 @@
         <!-- End of Content Wrapper -->
 
     </div>
+    <script src="<?= base_url('vendor/simple-datatables/simple-datatables.js') ?>"></script>
+    <script>
+        // Simple Datatable
+        let table1 = document.querySelector('#table1');
+        let dataTable = new simpleDatatables.DataTable(table1);
+    </script>
     <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->

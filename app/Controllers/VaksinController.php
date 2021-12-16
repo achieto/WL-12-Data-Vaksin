@@ -54,9 +54,7 @@ class VaksinController extends BaseController
 		}
 
 		$data = [
-			// 'wilayah1' => $this->VaksinModel->where('wilayah', '1')->findAll(),
-			'wilayah1' => $this->VaksinModel->where('wilayah', '1')->paginate(5, 'wilayah1'),
-			'pager' => $this->VaksinModel->where('wilayah', '1')->pager,
+			'wilayah1' => $this->VaksinModel->where('wilayah', '1')->findAll(),
 			'title' => "Region 1",
 		];
 
@@ -71,8 +69,7 @@ class VaksinController extends BaseController
 		}
 
 		$data = [
-			'wilayah2' => $this->VaksinModel->where('wilayah', '2')->paginate(5, 'wilayah2'),
-			'pager' => $this->VaksinModel->where('wilayah', '2')->pager,
+			'wilayah2' => $this->VaksinModel->where('wilayah', '2')->findAll(),
 			'title' => "Region 2",
 		];
 		return view("wilayah/v_wilayah2", $data);
@@ -86,8 +83,7 @@ class VaksinController extends BaseController
 		}
 
 		$data = [
-			'wilayah3' => $this->VaksinModel->where('wilayah', '3')->paginate(5, 'wilayah3'),
-			'pager' => $this->VaksinModel->where('wilayah', '3')->pager,
+			'wilayah3' => $this->VaksinModel->where('wilayah', '3')->findAll(),
 			'title' => "Region 3",
 		];
 		return view("wilayah/v_wilayah3", $data);
@@ -101,8 +97,7 @@ class VaksinController extends BaseController
 		}
 
 		$data = [
-			'wilayah4' => $this->VaksinModel->where('wilayah', '4')->paginate(5, 'wilayah4'),
-			'pager' => $this->VaksinModel->where('wilayah', '4')->pager,
+			'wilayah4' => $this->VaksinModel->where('wilayah', '4')->findAll(),
 			'title' => "Region 4",
 		];
 		return view("wilayah/v_wilayah4", $data);
