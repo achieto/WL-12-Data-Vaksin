@@ -113,7 +113,6 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
                     <div id="cont" style="padding: 6px;">
                         <center>
                             <h1>Tambah Data Admin</h1>
@@ -133,7 +132,17 @@
                                                 <td>Nama</td>
                                                 <td class="col-sm-6"><input type="text" style="border:none; outline:none; background:linear-gradient(#d3d3d3, #d3d3d3) center bottom 5px /calc(100% - 10px) 1px no-repeat;" class="form-control" name="nama" autocomplete="off" required></td>
                                             </tr>
+                                            <tr>
+                                                <td>Role</td>
+                                                <td class="col-sm-6">
+                                                    <select class="custom-select" style="font: 13px/20px normal Helvetica, Arial, sans-serif;" name="admin" id="admin" required>
+                                                        <option selected="true" value="" disabled selected>Pilih...</option>
+                                                        <option value="AdminModel" id="Admin">Admin</option>
+                                                        <option value="ValidatorModel" id="Validator">Validator</option>
+                                                    </select>
+                                                </td>
                                             </tr>
+                                            <input type="hidden" name="role" id="role" value="">
                                             <tr>
                                                 <td></td>
                                                 <td></td>
@@ -144,9 +153,49 @@
                                     </table>
                                 </div>
                             </div>
+
+                            <div class="card" style="width: 45rem; margin-top: 3rem">
+                                <div class="card-body">
+                                    <table style="text-align:center" class="table table-striped" width="1200px">
+                                        <tr>
+                                            <td scope="col">Username</td>
+                                            <td scope="col">Nama</td>
+                                            <td scope="col">Role</td>
+                                        </tr>
+                                        <?php
+                                        foreach ($vaksinasi as $row) :
+                                        ?>
+                                            <tr>
+                                                <td scope="row"><?= $row['username'] ?></td>
+                                                <td scope="row"><?= $row['nama'] ?></td>
+                                                <td scope="row"><?= $row['role'] ?></td>
+                                            </tr>
+                                        <?php endforeach; ?>
+                                        <?php
+                                        foreach ($vaksin as $row) :
+                                        ?>
+                                            <tr>
+                                                <td scope="row"><?= $row['username'] ?></td>
+                                                <td scope="row"><?= $row['nama'] ?></td>
+                                                <td scope="row"><?= $row['role'] ?></td>
+                                            </tr>
+                                        <?php endforeach; ?>
+                                    </table>
+                                </div>
+                            </div>
                         </center>
                     </div>
                 </div>
+
+                <script>
+                    document.getElementById('admin').onchange = function() {
+                        if (this.value == 'AdminModel') {
+                            document.getElementById('role').value = "Admin";
+                        } else {
+                            document.getElementById('role').value = "Validator";
+                        }
+                    }
+                </script>
                 <!-- /.container-fluid -->
 
             </div>

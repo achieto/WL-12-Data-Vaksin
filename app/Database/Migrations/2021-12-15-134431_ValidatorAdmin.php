@@ -22,6 +22,14 @@ class ValidatorAdmin extends Migration
 				'type'           => 'VARCHAR',
 				'constraint'     => '35',
 			],
+			'admin' => [
+				'type'           => 'VARCHAR',
+				'constraint'     => '35',
+			],
+			'role' => [
+				'type'           => 'VARCHAR',
+				'constraint'     => '35',
+			]
 		]);
 		$this->forge->addKey('username', true);
 		$this->forge->createTable('ValidatorAdmin');

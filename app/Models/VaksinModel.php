@@ -23,8 +23,7 @@ class VaksinModel extends Model
 
 	public function search($keyword)
 	{
-		$builder = $this->table('vaksinasi');
-		$builder->like('Nama', $keyword);
-		return $builder;
+		return $this->table('vaksinasi')->like('no_batch', $keyword)
+		->orLike('nik', $keyword);
 	}
 }

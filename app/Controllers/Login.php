@@ -62,6 +62,8 @@ class Login extends BaseController
 
 	public function create()
 	{
+		$AdminModel = new AdminModel();
+		$ValidatorModel = new ValidatorModel();
 		if (session()->get('username') == '') {
 			session()->setFlashdata('gagal', 'Anda belum login');
 			return redirect()->to(base_url('/'));
@@ -69,6 +71,8 @@ class Login extends BaseController
 
 		$data = [
 			'title' => "Input Admin",
+			'vaksinasi' => $AdminModel->findAll(),
+			'vaksin' => $ValidatorModel->findAll()
 		];
 		return view('v_inputadmin', $data);
 	}
@@ -78,10 +82,11 @@ class Login extends BaseController
 			'username' => $this->request->getVar('username'),
 			'password' => $this->request->getVar('password'),
 			'nama' => $this->request->getVar('nama'),
+			'admin' => $this->request->getVar('admin'),
+			'role' => $this->request->getVar('role'),
 		];
 
-		$AdminModel = model("AdminModel");
-		$AdminModel->insert($data);
+		model($data['admin'])->insert($data);
 
 		return redirect()->to(base_url('/inputadmin'));
 	}

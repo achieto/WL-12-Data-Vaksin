@@ -9,5 +9,5 @@ class ValidatorModel extends Model
     }
     protected $table                = 'validatoradmin';
     protected $primaryKey           = 'username';
-    protected $allowedFields        = ['username', 'password', 'nama'];
+    protected $allowedFields        = ['username', 'password', 'nama', 'admin', 'role'];
 }
