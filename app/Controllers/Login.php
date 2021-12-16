@@ -22,28 +22,28 @@ class Login extends BaseController
 		// $table = 'admin';
 		$username = $this->request->getPost('username');
 		$password = $this->request->getPost('password');
-
+		
 		$cek = $admin->get_data($username, $password);
 		$ceksuper = $super->get_data($username, $password);
 		$cekvalidator = $validator->get_data($username, $password);
 		if ($cek != null) {
 			
 				$login = [
-					'username' => $username
+					'username' => $username,
 				];
 				session()->set($login);
 				return redirect()->to(base_url('admin'));
 		} 
 		else if ($ceksuper != null) {
 			$login = [
-				'username' => $username
+				'username' => $username,
 			];
 			session()->set($login);
 			return redirect()->to(base_url('super'));
 		} 
 		else if($cekvalidator != null) {
 			$login = [
-				'username' => $username
+				'username' => $username,
 			];
 			session()->set($login);
 			return redirect()->to(base_url('entryvalid'));
@@ -72,7 +72,8 @@ class Login extends BaseController
 		$data = [
 			'title' => "Input Admin",
 			'vaksinasi' => $AdminModel->findAll(),
-			'vaksin' => $ValidatorModel->findAll()
+			'vaksin' => $ValidatorModel->findAll(),
+			'nama' => session()->get('username')
 		];
 		return view('v_inputadmin', $data);
 	}

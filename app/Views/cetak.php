@@ -66,7 +66,7 @@
 
                     <tr>
                         <td>No. Batch</td>
-                        <td><?php echo ":  " . $row['no_batch']; ?></td>
+                        <td><?php echo ":  " . strtoupper($row['no_batch']); ?></td>
                     </tr>
                     <tr>
                         <td>NIK</td>
@@ -74,7 +74,7 @@
                     </tr>
                     <tr>
                         <td>Nama</td>
-                        <td><?php echo ":  " . $row['nama']; ?></td>
+                        <td><?php echo ":  " . ucwords($row['nama']); ?></td>
                     </tr>
                     <tr>
                         <td>Jenis Kelamin</td>

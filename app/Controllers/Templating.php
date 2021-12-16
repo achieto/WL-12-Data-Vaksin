@@ -10,7 +10,7 @@ class Templating extends BaseController
 			session()->setFlashdata('gagal', 'Anda belum login');
 			return redirect()->to(base_url('/'));
 		}
-
+		
 		$VaksinModel = model("VaksinModel");
 		$data = [
 			'title' => "Home",
@@ -18,6 +18,7 @@ class Templating extends BaseController
 			'wilayah2' => $VaksinModel->where('wilayah', '2')->findAll(),
 			'wilayah3' => $VaksinModel->where('wilayah', '3')->findAll(),
 			'wilayah4' => $VaksinModel->where('wilayah', '4')->findAll(),
+			'nama' => session()->get('username')
 		];
 		return view('v_admin', $data);
 	}
@@ -31,6 +32,7 @@ class Templating extends BaseController
 
 		$data = [
 			'title' => "Home",
+			'nama' => session()->get('username')
 		];
 		return view('v_super', $data);
 	}
@@ -44,6 +46,7 @@ class Templating extends BaseController
 
 		$data = [
 			'title' => "Home",
+			'nama' => session()->get('username')
 		];
 		return view('v_entryvalid', $data);
 	}
@@ -70,6 +73,7 @@ class Templating extends BaseController
 
 		$data = [
 			'title' => "About",
+			'nama' => session()->get('username')
 		];
         return view('v_aboutadmin', $data);
 	}
@@ -83,6 +87,7 @@ class Templating extends BaseController
 
 		$data = [
 			'title' => "About",
+			'nama' => session()->get('username')
 		];
         return view('v_aboutsuper', $data);
 	}

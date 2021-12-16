@@ -42,7 +42,7 @@
                     <i class="fas fa-edit"></i>
                     <span>Input Entry</span></a>
             </li>
-            
+
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -70,17 +70,15 @@
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
-    
+
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-800">Admin</span>
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-800"><?php echo ucwords($nama) ?></span>
                                 <i class="fa fa-user-md mr-2 text-gray-800"></i>
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
@@ -95,8 +93,8 @@
                 <div class="container-fluid">
 
                     <div id="cont" style="padding: 6px;">
-                    <center>
-                        <h1>Edit Data Vaksin</h1>
+                        <center>
+                            <h1>Edit Data Vaksin</h1>
                             <div class="card" style="width: 45rem; border-radius: 20px">
                                 <div class="card-body">
                                     <table cellpadding="12" cellspacing="5">
@@ -189,7 +187,7 @@
                                     </table>
                                 </div>
                             </div>
-                    </center>
+                        </center>
                     </div>
                 </div>
                 <!-- /.container-fluid -->

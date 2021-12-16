@@ -33,6 +33,7 @@ class VaksinController extends BaseController
 		$data = [
 			'title' => "Entry Vaksin",
 			'vaksinasi' => $super->findAll(),
+			'nama' => session()->get('username')
 		];
 		return view("v_entrysuper", $data);
 	}
@@ -53,7 +54,8 @@ class VaksinController extends BaseController
 		
 		$data = [
 			'title' => "Entry Vaksin",
-			'vaksinasi' => $valid->findAll()
+			'vaksinasi' => $valid->findAll(),
+			'nama' => session()->get('username')
 		];
 		return view("v_entryvalid", $data);
 	}
@@ -73,13 +75,9 @@ class VaksinController extends BaseController
 		}
 
 		$data = [
-<<<<<<< HEAD
-			'wilayah1' => $this->VaksinModel->where('wilayah', '1')->findAll(),
-=======
-			'wilayah1' => $wilayah1->where('wilayah', '1')->paginate(5, 'wilayah1'),
-			'pager' => $this->VaksinModel->where('wilayah', '1')->pager,
->>>>>>> b0bcaee4bdf54b796c59be26c4e10e4708189064
+			'wilayah1' => $wilayah1->where('wilayah', '1')->findAll(),
 			'title' => "Region 1",
+			'nama' => session()->get('username')
 		];
 
 		return view("wilayah/v_wilayah1", $data);
@@ -100,13 +98,9 @@ class VaksinController extends BaseController
 		}
 
 		$data = [
-<<<<<<< HEAD
-			'wilayah2' => $this->VaksinModel->where('wilayah', '2')->findAll(),
-=======
-			'wilayah2' => $wilayah2->where('wilayah', '2')->paginate(5, 'wilayah2'),
-			'pager' => $this->VaksinModel->where('wilayah', '2')->pager,
->>>>>>> b0bcaee4bdf54b796c59be26c4e10e4708189064
+			'wilayah2' => $wilayah2->where('wilayah', '2')->findAll(),
 			'title' => "Region 2",
+			'nama' => session()->get('username')
 		];
 		return view("wilayah/v_wilayah2", $data);
 	}
@@ -126,13 +120,9 @@ class VaksinController extends BaseController
 		}
 
 		$data = [
-<<<<<<< HEAD
-			'wilayah3' => $this->VaksinModel->where('wilayah', '3')->findAll(),
-=======
-			'wilayah3' => $wilayah3->where('wilayah', '3')->paginate(5, 'wilayah3'),
-			'pager' => $this->VaksinModel->where('wilayah', '3')->pager,
->>>>>>> b0bcaee4bdf54b796c59be26c4e10e4708189064
+			'wilayah3' => $wilayah3->where('wilayah', '3')->findAll(),
 			'title' => "Region 3",
+			'nama' => session()->get('username')
 		];
 		return view("wilayah/v_wilayah3", $data);
 	}
@@ -152,13 +142,9 @@ class VaksinController extends BaseController
 		}
 
 		$data = [
-<<<<<<< HEAD
-			'wilayah4' => $this->VaksinModel->where('wilayah', '4')->findAll(),
-=======
-			'wilayah4' => $wilayah4->where('wilayah', '4')->paginate(5, 'wilayah4'),
-			'pager' => $this->VaksinModel->where('wilayah', '4')->pager,
->>>>>>> b0bcaee4bdf54b796c59be26c4e10e4708189064
+			'wilayah4' => $wilayah4->where('wilayah', '4')->findAll(),
 			'title' => "Region 4",
+			'nama' => session()->get('username')
 		];
 		return view("wilayah/v_wilayah4", $data);
 	}
@@ -172,6 +158,7 @@ class VaksinController extends BaseController
 
 		$data = [
 			'title' => "Input Entry",
+			'nama' => session()->get('username')
 		];
 		return view('v_input', $data);
 	}
@@ -213,7 +200,8 @@ class VaksinController extends BaseController
 
 		$data = [
 			'title' => "Edit Entry",
-			'row' => $this->VaksinModel->getVaksin($no_batch)
+			'row' => $this->VaksinModel->getVaksin($no_batch),
+			'nama' => session()->get('username')
 		];
 
 		return view("v_edit", $data);

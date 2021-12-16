@@ -57,7 +57,7 @@
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
-                    
+
                     <!-- Topbar Search -->
                     <div class="col-4">
                         <ul class="navbar-nav ml-auto">
@@ -80,7 +80,7 @@
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-800">Validator</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-800"><?php echo ucwords($nama) ?></span>
                                 <i class="fa fa-user-md mr-2 text-gray-800"></i>
                             </a>
                             <!-- Dropdown - User Information -->
@@ -102,7 +102,7 @@
                         <h1>Data Vaksin<br></br></h1>
 
                         <div id="body">
-                            <table style="text-align:center" class="table table-striped" width="1200px">
+                            <table style="text-align:center" class="table table-striped" width="1200px" id="table1">
                                 <tr>
                                     <td scope="col">No.Batch</td>
                                     <td scope="col">NIK</td>
@@ -119,7 +119,7 @@
                                     <tr>
                                         <td scope="row"><?= strtoupper($row['no_batch']) ?></td>
                                         <td scope="row"><?= $row['nik'] ?></td>
-                                        <td scope="row"><?= $row['nama'] ?></td>
+                                        <td scope="row"><?= ucwords($row['nama']) ?></td>
                                         <td scope="row"><?= $row['jenis_kelamin'] ?></td>
                                         <td scope="row"><?= $row['usia'] ?></td>
                                         <td scope="row"><?= $row['dosis'] ?></td>
@@ -141,6 +141,12 @@
                 <!-- /.container-fluid -->
 
             </div>
+            <script src="<?= base_url('vendor/simple-datatables/simple-datatables.js') ?>"></script>
+            <script>
+                // Simple Datatable
+                let table1 = document.querySelector('#table1');
+                let dataTable = new simpleDatatables.DataTable(table1);
+            </script>
             <!-- End of Main Content -->
 
             <!-- Footer -->
