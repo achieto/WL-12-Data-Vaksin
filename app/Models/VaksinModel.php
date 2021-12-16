@@ -20,4 +20,11 @@ class VaksinModel extends Model
 		}
 		return $this->where(['no_batch' => $no_batch])->first();
 	}
+
+	public function search($keyword)
+	{
+		$builder = $this->table('vaksinasi');
+		$builder->like('Nama', $keyword);
+		return $builder;
+	}
 }

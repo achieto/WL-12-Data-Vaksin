@@ -53,6 +53,13 @@ class VaksinController extends BaseController
 			return redirect()->to(base_url('/'));
 		}
 
+		$keyword = $this->request->getVar('keyword');
+		if ($keyword) {
+			$this->VaksinModel->where('wilayah', '1')->search($keyword);
+		} else {
+			$this->VaksinModel->where('wilayah', '1')->findAll();
+		}
+
 		$data = [
 			'wilayah1' => $this->VaksinModel->where('wilayah', '1')->findAll(),
 			'title' => "Region 1",
