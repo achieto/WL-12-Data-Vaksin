@@ -20,4 +20,10 @@ class VaksinModel extends Model
 		}
 		return $this->where(['no_batch' => $no_batch])->first();
 	}
+
+	public function search($keyword)
+	{
+		return $this->table('vaksinasi')->like('no_batch', $keyword)
+		->orLike('nik', $keyword);
+	}
 }

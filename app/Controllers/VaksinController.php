@@ -22,11 +22,17 @@ class VaksinController extends BaseController
 			session()->setFlashdata('gagal', 'Anda belum login');
 			return redirect()->to(base_url('/'));
 		}
+
+		$keyword = $this->request->getVar('keyword');
+		if ($keyword) {
+			$super = $this->VaksinModel->search($keyword);
+		} else {
+			$super = $this->VaksinModel;
+		}
 		
-		$VaksinModel = model("VaksinModel");
 		$data = [
 			'title' => "Entry Vaksin",
-			'vaksinasi' => $VaksinModel->findAll()
+			'vaksinasi' => $super->findAll(),
 		];
 		return view("v_entrysuper", $data);
 	}
@@ -37,11 +43,17 @@ class VaksinController extends BaseController
 			session()->setFlashdata('gagal', 'Anda belum login');
 			return redirect()->to(base_url('/'));
 		}
+
+		$keyword = $this->request->getVar('keyword');
+		if ($keyword) {
+			$valid = $this->VaksinModel->search($keyword);
+		} else {
+			$valid = $this->VaksinModel;
+		}
 		
-		$VaksinModel = model("VaksinModel");
 		$data = [
 			'title' => "Entry Vaksin",
-			'vaksinasi' => $VaksinModel->findAll()
+			'vaksinasi' => $valid->findAll()
 		];
 		return view("v_entryvalid", $data);
 	}
@@ -53,8 +65,20 @@ class VaksinController extends BaseController
 			return redirect()->to(base_url('/'));
 		}
 
+		$keyword = $this->request->getVar('keyword');
+		if ($keyword) {
+			$wilayah1 = $this->VaksinModel->where('wilayah', '1')->search($keyword);
+		} else {
+			$wilayah1 = $this->VaksinModel;
+		}
+
 		$data = [
+<<<<<<< HEAD
 			'wilayah1' => $this->VaksinModel->where('wilayah', '1')->findAll(),
+=======
+			'wilayah1' => $wilayah1->where('wilayah', '1')->paginate(5, 'wilayah1'),
+			'pager' => $this->VaksinModel->where('wilayah', '1')->pager,
+>>>>>>> b0bcaee4bdf54b796c59be26c4e10e4708189064
 			'title' => "Region 1",
 		];
 
@@ -68,8 +92,20 @@ class VaksinController extends BaseController
 			return redirect()->to(base_url('/'));
 		}
 
+		$keyword = $this->request->getVar('keyword');
+		if ($keyword) {
+			$wilayah2 = $this->VaksinModel->where('wilayah', '2')->search($keyword);
+		} else {
+			$wilayah2 = $this->VaksinModel;
+		}
+
 		$data = [
+<<<<<<< HEAD
 			'wilayah2' => $this->VaksinModel->where('wilayah', '2')->findAll(),
+=======
+			'wilayah2' => $wilayah2->where('wilayah', '2')->paginate(5, 'wilayah2'),
+			'pager' => $this->VaksinModel->where('wilayah', '2')->pager,
+>>>>>>> b0bcaee4bdf54b796c59be26c4e10e4708189064
 			'title' => "Region 2",
 		];
 		return view("wilayah/v_wilayah2", $data);
@@ -82,8 +118,20 @@ class VaksinController extends BaseController
 			return redirect()->to(base_url('/'));
 		}
 
+		$keyword = $this->request->getVar('keyword');
+		if ($keyword) {
+			$wilayah3 = $this->VaksinModel->where('wilayah', '3')->search($keyword);
+		} else {
+			$wilayah3 = $this->VaksinModel;
+		}
+
 		$data = [
+<<<<<<< HEAD
 			'wilayah3' => $this->VaksinModel->where('wilayah', '3')->findAll(),
+=======
+			'wilayah3' => $wilayah3->where('wilayah', '3')->paginate(5, 'wilayah3'),
+			'pager' => $this->VaksinModel->where('wilayah', '3')->pager,
+>>>>>>> b0bcaee4bdf54b796c59be26c4e10e4708189064
 			'title' => "Region 3",
 		];
 		return view("wilayah/v_wilayah3", $data);
@@ -96,8 +144,20 @@ class VaksinController extends BaseController
 			return redirect()->to(base_url('/'));
 		}
 
+		$keyword = $this->request->getVar('keyword');
+		if ($keyword) {
+			$wilayah4 = $this->VaksinModel->where('wilayah', '4')->search($keyword);
+		} else {
+			$wilayah4 = $this->VaksinModel;
+		}
+
 		$data = [
+<<<<<<< HEAD
 			'wilayah4' => $this->VaksinModel->where('wilayah', '4')->findAll(),
+=======
+			'wilayah4' => $wilayah4->where('wilayah', '4')->paginate(5, 'wilayah4'),
+			'pager' => $this->VaksinModel->where('wilayah', '4')->pager,
+>>>>>>> b0bcaee4bdf54b796c59be26c4e10e4708189064
 			'title' => "Region 4",
 		];
 		return view("wilayah/v_wilayah4", $data);
